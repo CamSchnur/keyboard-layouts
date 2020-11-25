@@ -1,0 +1,11 @@
+body {
+    background-color: #2e2e2e
+}
+
+.key {
+    width: 5vw;
+    height: 5vw;
+    background-color: #dfdfdf;
+    border-radius: 1vw;
+    border: solid 5px white;
+}
