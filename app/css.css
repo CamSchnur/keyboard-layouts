@@ -1,11 +1,57 @@
+:root{
+--keywidth: 5vw;
+--borderWidth: 1vw;
+--keyspacing: 6vw;
+}
 body {
     background-color: #2e2e2e
 }
 
+.keyboard
+{
+    position:absolute;
+    left:20%;
+    top:20%;
+
+}
 .key {
     width: 5vw;
     height: 5vw;
-    background-color: #dfdfdf;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     border-radius: 1vw;
     border: solid 5px white;
+}
+
+.lowerNavArea
+{
+    position:absolute;
+    left:10vw;
+    top:10vw;
+    
+}
+.navLeft
+{ 
+    position:absolute;
+    top:var(--keyspacing);
+    left:0
+}
+.navRight
+{
+    position:absolute;
+    top:var(--keyspacing);
+    left:2*var(--keyspacing);
+}
+.navUp
+{
+    top:0;
+    left:var(--keyspacing);
+    position: absolute;
+}
+.navDown
+{
+    position:absolute;
+    top:var(--keyspacing);
+    left:var(--keyspacing);
 }
