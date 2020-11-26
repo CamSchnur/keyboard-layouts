@@ -1,7 +1,21 @@
 :root{
---keywidth: 5vw;
+
 --borderWidth: 1vw;
---keyspacing: 6vw;
+
+
+/* sizes based on 1u = 18mm  and 4px = 1mm   */
+
+--size1u: 72px;
+--size1p25u: 90px - 4px; 
+--size1p50u: 108px - 4px;
+--size1p75u: 126px - 4px;
+--size2u: 144px - 4px;
+--size2p25u: 162px - 4px;
+--size2p50u: 180px - 4px;
+
+--sizeVisualKeyBorder: 2px;
+--sizeKeySpace: 4px;
+
 }
 body {
     background-color: #2e2e2e
@@ -15,13 +29,21 @@ body {
 
 }
 .key {
-    width: 5vw;
-    height: 5vw;
     display:flex;
     justify-content:center;
     align-items:center;
     border-radius: 1vw;
-    border: solid 5px white;
+    border: solid var(--sizeVisualKeyBorder) white;
+}
+.key:hover
+{
+    background-color: #858585;
+}
+
+.key1u
+{
+    width:calc(var(--size1u) - var(--sizeVisualKeyBorder) - var(--sizeVisualKeyBorder));
+    height:calc(var(--size1u) - var(--sizeVisualKeyBorder) - var(--sizeVisualKeyBorder));
 }
 
 .lowerNavArea
@@ -31,25 +53,26 @@ body {
     top:10vw;
     
 }
-.navLeft
+
+.keys_navLeft
 { 
     position:absolute;
     top:var(--keyspacing);
     left:0
 }
-.navRight
+.keys_navRight
 {
     position:absolute;
     top:var(--keyspacing);
     left:2*var(--keyspacing);
 }
-.navUp
+.keys_navUp
 {
     top:0;
     left:var(--keyspacing);
     position: absolute;
 }
-.navDown
+.keys_navDown
 {
     position:absolute;
     top:var(--keyspacing);
