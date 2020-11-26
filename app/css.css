@@ -1,23 +1,21 @@
 :root{
-
---borderWidth: 1vw;
-
-
 /* sizes based on 1u = 18mm  and 4px = 1mm   */
 
 --size1u: 72px;
+/*
 --size1p25u: 90px - 4px; 
 --size1p50u: 108px - 4px;
 --size1p75u: 126px - 4px;
 --size2u: 144px - 4px;
 --size2p25u: 162px - 4px;
---size2p50u: 180px - 4px;
+--size2p50u: 180px - 4px;*/
 
 --sizeVisualKeyBorder: 2px;  /* (visual only) thin line showing key border */ 
 --sizeVisualKeyBorderSides: 12px;      /* thickness of border showing key sides */ 
 
 --sizeKeySpace: 4px; /* spacing between the keys */ 
 
+--keyspacing: 100px;
 }
 body {
     background-color: #2e2e2e
@@ -30,18 +28,35 @@ body {
     top:20%;
 
 }
+
 .key {
-    display:flex;
-    justify-content:center;
-    align-items:center;
     border-radius: 1vw;
     border: solid var(--sizeVisualKeyBorder) white;
     margin:var(--sizeKeySpace);
+
+    
+    display: inline-block;
 }
+
+.emptySpace
+{
+    border-radius: 1vw;
+    border: transparent var(--sizeVisualKeyBorder);
+    margin:var(--sizeKeySpace);
+    display: inline-block;
+
+    
+    width:calc(var(--size1u) - var(--sizeVisualKeyBorder) - var(--sizeVisualKeyBorder));
+    height:calc(var(--size1u) - var(--sizeVisualKeyBorder) - var(--sizeVisualKeyBorder));
+}
+
 .key:hover
 {
     background-color: white;
     
+  /* 
+  
+    commenting this out for now; changing the border width doesn't seem to work as well with display:inline-block
     border-left:solid var(--sizeVisualKeyBorderSides) lightblue;
     border-right:solid var(--sizeVisualKeyBorderSides) lightblue;
     border-top: solid var(--sizeVisualKeyBorderSides)lightseagreen;
@@ -49,6 +64,8 @@ body {
 
     width:calc(var(--size1u) - var(--sizeVisualKeyBorderSides) - var(--sizeVisualKeyBorderSides));
     height:calc(var(--size1u) - var(--sizeVisualKeyBorderSides) - var(--sizeVisualKeyBorderSides));
+*/
+   
 }
 
 .key1u
@@ -62,30 +79,8 @@ body {
     position:absolute;
     left:10vw;
     top:10vw;
-    
-}
-
-.keys_navLeft
-{ 
-    position:absolute;
-    top:var(--keyspacing);
-    left:0
-}
-.keys_navRight
-{
-    position:absolute;
-    top:var(--keyspacing);
-    left:2*var(--keyspacing);
-}
-.keys_navUp
-{
-    top:0;
-    left:var(--keyspacing);
-    position: absolute;
-}
-.keys_navDown
-{
-    position:absolute;
-    top:var(--keyspacing);
-    left:var(--keyspacing);
+    width: calc(  (3 * var(--size1u)) + (6 * var(--sizeKeySpace))  );
+    height: calc(  (2 * var(--size1u)) + (4 * var(--sizeKeySpace))  );
+    display: table;
+    background-color: pink;
 }
