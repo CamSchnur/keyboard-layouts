@@ -32,57 +32,6 @@ body {
 
 }
 
-.key {
-    border-radius: var(--borderRounding);
-    border: solid var(--sizeVisualKeyBorder) lightcyan;
-
-    box-sizing:border-box;
-
-    margin:var(--sizeKeySpace);
-    
-    display: inline-block;
-
-    vertical-align:middle;
-    text-align: center;
-
-    /* thicker border option:
-        
-    */
-    /* border-left:solid var(--sizeVisualKeyBorderSides) lightblue;
-    border-right:solid var(--sizeVisualKeyBorderSides) lightblue;
-    border-top: solid var(--sizeVisualKeyBorderSides)lightseagreen;
-    border-bottom: solid var(--sizeVisualKeyBorderSides)lightseagreen; */
-}
-
-.emptySpace
-{
-    border-radius: var(--borderRounding);
-    margin:var(--sizeKeySpace);
-    display: inline-block;
-
-    background-color: slategrey;
-    vertical-align:middle;
-    text-align: center;
-
-}
-
-.key:hover
-{
-   /* border-left:solid var(--sizeVisualKeyBorderSides) lightblue;
-    border-right:solid var(--sizeVisualKeyBorderSides) lightblue;
-    border-top: solid var(--sizeVisualKeyBorderSides)lightseagreen;
-    border-bottom: solid var(--sizeVisualKeyBorderSides)lightseagreen; */
-
-    background-color: lightcyan;
-}
-
-
-.size1u
-{
-    width: var(--size1u);
-    height:  var(--size1u);
-    line-height: var(--size1u);
-}
 .upperNavArea
 {
     border-radius: var(--borderRounding);
