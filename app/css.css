@@ -3,10 +3,12 @@
 
 --size1u: 72px;
 --borderRounding: 5px;
---sizeKeySpace: 4px; /* spacing between the keys */ 
+--sizeKeySpace: 2px; /* spacing between the keys */ 
 
 --sizeVisualKeyBorder: 2px;
 --sizeVisualKeyBorderSides: 12px; 
+
+--sizeSectionSpace: 24; /* standard spacing between sections on the board */
 
 }
 body {
@@ -15,16 +17,25 @@ body {
 
 .keyboard
 {
+    border-radius: var(--borderRounding);
     position:absolute;
     left:20%;
     top:20%;
+    display: table;
+
+    /*21 keys (20 1u, 21 2u plus margins and section spacing */
+    width:calc((22 * var(--size1u)) + (42 * var(--sizeKeySpace)) + (2 * var(--sizeSectionSpace)));
+    height: calc((6 * var(--size1)) + (12 * var(--sizekeyspace)) + (2 * var(--sizeSectionSpace)));
+
+
+    background-color: #1e1e1e
 
 }
 
 .key {
     border-radius: var(--borderRounding);
     border: solid var(--sizeVisualKeyBorder) lightcyan;
-    
+
     box-sizing:border-box;
 
     margin:var(--sizeKeySpace);
@@ -34,6 +45,13 @@ body {
     vertical-align:middle;
     text-align: center;
 
+    /* thicker border option:
+        
+    */
+    /* border-left:solid var(--sizeVisualKeyBorderSides) lightblue;
+    border-right:solid var(--sizeVisualKeyBorderSides) lightblue;
+    border-top: solid var(--sizeVisualKeyBorderSides)lightseagreen;
+    border-bottom: solid var(--sizeVisualKeyBorderSides)lightseagreen; */
 }
 
 .emptySpace
@@ -50,34 +68,35 @@ body {
 
 .key:hover
 {
-    
-    vertical-align:middle;
-    text-align: center;
-
-    
-    border-left:solid var(--sizeVisualKeyBorderSides) lightblue;
+   /* border-left:solid var(--sizeVisualKeyBorderSides) lightblue;
     border-right:solid var(--sizeVisualKeyBorderSides) lightblue;
     border-top: solid var(--sizeVisualKeyBorderSides)lightseagreen;
-    border-bottom: solid var(--sizeVisualKeyBorderSides)lightseagreen;
+    border-bottom: solid var(--sizeVisualKeyBorderSides)lightseagreen; */
+
+    background-color: lightcyan;
 }
 
-.keyText
-{
-    position:absolute;
-    display: flex;
-}
+
 .size1u
 {
     width: var(--size1u);
     height:  var(--size1u);
+    line-height: var(--size1u);
 }
+.upperNavArea
+{
+    border-radius: var(--borderRounding);
 
+    width: calc(  (3 * var(--size1u)) + (6 * var(--sizeKeySpace))   );
+    height: calc(  (2 * var(--size1u)) + (4 * var(--sizeKeySpace))  );
+    display: table;
+    background-color: darkslategray;
+    padding: 0;
+}
 .lowerNavArea
 {
     border-radius: var(--borderRounding);
-    position:absolute;
-    left:10vw;
-    top:10vw;
+
     width: calc(  (3 * var(--size1u)) + (6 * var(--sizeKeySpace))   );
     height: calc(  (2 * var(--size1u)) + (4 * var(--sizeKeySpace))  );
     display: table;
