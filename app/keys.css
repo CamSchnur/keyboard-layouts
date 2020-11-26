@@ -11,6 +11,7 @@
 
     vertical-align:middle;
     text-align: center;
+    line-height: var(--size1u);
     font-family: Helvetica, 'Lucida Sans', 'Gill-Sans', 'Segoe UI';
     /* thicker border option:
         
@@ -31,25 +32,6 @@
     background-color: lightcyan;
 }
 
-.size1u
-{
-    width: var(--size1u);
-    height:  var(--size1u);
-    line-height: var(--size1u);
-}
-.size1uDoubleWide
-{
-    width: calc((var(--size1u) * 2) + (2 * var(--sizeKeySpace)));
-    height:  var(--size1u);
-    line-height: var(--size1u);
-}
-.size1uDoubleTall
-{
-    width: var(--size1u);
-    height: calc((var(--size1u) * 2) + (2 * var(--sizeKeySpace)));
-    line-height: var(--size1u);
-}
-
 .emptySpace
 {
     border-radius: var(--borderRounding);
@@ -60,4 +42,32 @@
     vertical-align:middle;
     text-align: center;
 
+    width: var(--size1u);
+    height:  var(--size1u);
+}
+
+.gridTenKeyPlus
+{
+    grid-row-start: 2;
+    grid-row-end: 4;
+
+    grid-column-start:4;
+    grid-column-end:5;
+}
+.gridTenKeyEnter
+{
+
+    grid-row-start: 4;
+    grid-row-end: 6;
+
+    grid-column-start:4;
+    grid-column-end:5;
+}
+.gridTenKeyZero
+{
+    grid-row-start: 5;
+    grid-row-end: 6;
+
+    grid-column-start:1;
+    grid-column-end:3;
 }
