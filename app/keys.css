@@ -11,7 +11,7 @@
 
     vertical-align:middle;
     text-align: center;
-
+    font-family: Helvetica, 'Lucida Sans', 'Gill-Sans', 'Segoe UI';
     /* thicker border option:
         
     */
@@ -37,7 +37,18 @@
     height:  var(--size1u);
     line-height: var(--size1u);
 }
-
+.size1uDoubleWide
+{
+    width: calc((var(--size1u) * 2) + (2 * var(--sizeKeySpace)));
+    height:  var(--size1u);
+    line-height: var(--size1u);
+}
+.size1uDoubleTall
+{
+    width: var(--size1u);
+    height: calc((var(--size1u) * 2) + (2 * var(--sizeKeySpace)));
+    line-height: var(--size1u);
+}
 
 .emptySpace
 {

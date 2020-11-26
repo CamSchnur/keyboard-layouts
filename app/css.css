@@ -1,9 +1,9 @@
 :root{
 /* sizes based on 1u = 18mm  and 4px = 1mm   */
 
---size1u: 72px;
+--size1u: 54px;
 --borderRounding: 5px;
---sizeKeySpace: 2px; /* spacing between the keys */ 
+--sizeKeySpace: 1.5px; /* spacing between the keys */ 
 
 --sizeVisualKeyBorder: 2px;
 --sizeVisualKeyBorderSides: 12px; 
@@ -31,24 +31,43 @@ body {
     background-color: #1e1e1e
 
 }
-
-.upperNavArea
+.Area
 {
+    display: table;
+    padding: 0;
     border-radius: var(--borderRounding);
 
+    display: inline-block;
+}
+.functionArea
+{
+
+    background-color: darkblue;
+}
+.tenKeyAreaLeft
+{
     width: calc(  (3 * var(--size1u)) + (6 * var(--sizeKeySpace))   );
-    height: calc(  (2 * var(--size1u)) + (4 * var(--sizeKeySpace))  );
-    display: table;
     background-color: darkslategray;
-    padding: 0;
+}
+.tenKeyAreaRight
+{
+    background-color: darkslategray;
+    width: calc( var(--size1u) + (2 * var(--sizeKeySpace)));
+}
+.functionNavArea
+{
+
+    background-color: darkred
+}
+.upperNavArea
+{
+    width: calc(  (3 * var(--size1u)) + (6 * var(--sizeKeySpace))   );
+   /* height: calc(  (2 * var(--size1u)) + (4 * var(--sizeKeySpace))  ); */
+    background-color: dimgray;
 }
 .lowerNavArea
 {
-    border-radius: var(--borderRounding);
-
     width: calc(  (3 * var(--size1u)) + (6 * var(--sizeKeySpace))   );
-    height: calc(  (2 * var(--size1u)) + (4 * var(--sizeKeySpace))  );
-    display: table;
-    background-color: darkslategray;
-    padding: 0;
+    /* height: calc(  (2 * var(--size1u)) + (4 * var(--sizeKeySpace))  );*/
+    background-color: darkblue;
 }
