@@ -1,15 +1,18 @@
 :root{
 /* sizes based on 1u = 18mm  and 4px = 1mm   */
 
---size1u: 54px;
+--size1u: 54px; /*72*/
 --borderRounding: 5px;
---sizeKeySpace: 1.5px; /* spacing between the keys */ 
+--sizeKeySpace: 1.5px; /* spacing between the keys */ /*2*/
 
 --sizeVisualKeyBorder: 2px;
 --sizeVisualKeyBorderSides: 12px; 
 
 --sizeSectionSpace: 24; /* standard spacing between sections on the board */
 
+--widthMainArea: calc(  (15 * var(--size1u)) + (30 * var(--sizeKeySpace)));
+--widthNavArea: calc(  (3 * var(--size1u)) + (6 * var(--sizeKeySpace)));
+--widthTenKeyArea:calc(  (4 * var(--size1u)) + (8 * var(--sizeKeySpace)));
 }
 body {
     background-color: #2e2e2e
@@ -21,11 +24,10 @@ body {
     position:absolute;
     left:20%;
     top:20%;
-    display: table;
+    display: grid;
+    grid-template-columns: var(--widthMainArea) var(--widthNavArea) var(--widthTenKeyArea);
 
     /*21 keys (20 1u, 21 2u plus margins and section spacing */
-    width:calc((22 * var(--size1u)) + (42 * var(--sizeKeySpace)) + (2 * var(--sizeSectionSpace)));
-    height: calc((6 * var(--size1)) + (12 * var(--sizekeyspace)) + (2 * var(--sizeSectionSpace)));
 
 
     background-color: #1e1e1e
@@ -37,37 +39,91 @@ body {
     padding: 0;
     border-radius: var(--borderRounding);
 
-    display: inline-block;
-}
-.functionArea
-{
+    display: grid;
+    grid-gap: var(--sizeKeySpace);
 
+    
+}
+.functionKeyArea
+{
     background-color: darkblue;
-}
-.tenKeyAreaLeft
-{
-    width: calc(  (3 * var(--size1u)) + (6 * var(--sizeKeySpace))   );
-    background-color: darkslategray;
-}
-.tenKeyAreaRight
-{
-    background-color: darkslategray;
-    width: calc( var(--size1u) + (2 * var(--sizeKeySpace)));
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    grid-column-start:1;
+    grid-column-end:2;
 }
 .functionNavArea
 {
+    background-color: darkred;
+    grid-row-start: 1;
+    grid-row-end: 2;
 
-    background-color: darkred
+    grid-column-start:2;
+    grid-column-end:3;
 }
+.mediaArea
+{
+    background-color: darkolivegreen;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    grid-column-start:3;
+    grid-column-end:4;
+}
+.mainArea
+{
+    background-color: darkslateblue;
+
+    grid-row-start: 2;
+    grid-row-end: 5;
+
+    grid-column-start:1;
+    grid-column-end:2;
+}
+
 .upperNavArea
 {
-    width: calc(  (3 * var(--size1u)) + (6 * var(--sizeKeySpace))   );
-   /* height: calc(  (2 * var(--size1u)) + (4 * var(--sizeKeySpace))  ); */
+   grid-template-columns: var(--size1u) var(--size1u) var(--size1u);
     background-color: dimgray;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    grid-column-start:2;
+    grid-column-end:3;
+}
+.midNavArea
+{
+    background-color:pink;
+
+    grid-row-start: 3;
+    grid-row-end: 4;
+
+    grid-column-start:2;
+    grid-column-end:3;
 }
 .lowerNavArea
 {
-    width: calc(  (3 * var(--size1u)) + (6 * var(--sizeKeySpace))   );
-    /* height: calc(  (2 * var(--size1u)) + (4 * var(--sizeKeySpace))  );*/
-    background-color: darkblue;
+    grid-template-columns: var(--size1u) var(--size1u) var(--size1u);
+
+    background-color: darkgoldenrod;
+    grid-row-start: 4;
+    grid-row-end: 5;
+
+    grid-column-start:2;
+    grid-column-end:3;
+}
+.tenKeyArea
+{
+
+    background-color: darkslategray;
+
+    grid-template-columns: var(--size1u) var(--size1u) var(--size1u) var(--size1u);
+
+    grid-row-start: 2;
+    grid-row-end: 5;
+
+    grid-column-start:3;
+    grid-column-end:4;
 }
