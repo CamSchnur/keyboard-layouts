@@ -13,8 +13,10 @@
 --size2p25u: 162px - 4px;
 --size2p50u: 180px - 4px;
 
---sizeVisualKeyBorder: 2px;
---sizeKeySpace: 4px;
+--sizeVisualKeyBorder: 2px;  /* (visual only) thin line showing key border */ 
+--sizeVisualKeyBorderSides: 12px;      /* thickness of border showing key sides */ 
+
+--sizeKeySpace: 4px; /* spacing between the keys */ 
 
 }
 body {
@@ -34,10 +36,19 @@ body {
     align-items:center;
     border-radius: 1vw;
     border: solid var(--sizeVisualKeyBorder) white;
+    margin:var(--sizeKeySpace);
 }
 .key:hover
 {
-    background-color: #858585;
+    background-color: white;
+    
+    border-left:solid var(--sizeVisualKeyBorderSides) lightblue;
+    border-right:solid var(--sizeVisualKeyBorderSides) lightblue;
+    border-top: solid var(--sizeVisualKeyBorderSides)lightseagreen;
+    border-bottom: solid var(--sizeVisualKeyBorderSides)lightseagreen;
+
+    width:calc(var(--size1u) - var(--sizeVisualKeyBorderSides) - var(--sizeVisualKeyBorderSides));
+    height:calc(var(--size1u) - var(--sizeVisualKeyBorderSides) - var(--sizeVisualKeyBorderSides));
 }
 
 .key1u
