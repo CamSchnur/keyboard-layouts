@@ -1,0 +1,69 @@
+
+.mainNumberRow
+{
+    grid-template-columns: var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) ;
+    grid-template-rows: var(--size1u);
+    
+      background-color: darkslategrey;
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    grid-column-start:1;
+    grid-column-end:2;
+
+}
+.mainUpperAlphas
+{
+    grid-template-columns: var(--size1u) var(--size1u) var(--size1u);
+    grid-template-rows: var(--size1u);
+      
+    background-color: darkseagreen;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    grid-column-start:1;
+    grid-column-end:2;
+
+}
+
+.mainMidAlphas
+{
+    grid-template-columns: var(--size1u) var(--size1u) var(--size1u);
+    grid-template-rows: var(--size1u);
+      
+    background-color: darkorchid;
+    grid-row-start: 3;
+    grid-row-end: 4;
+
+    grid-column-start:1;
+    grid-column-end:2;
+
+}
+
+.mainLowerAlphas
+{
+    grid-template-columns: var(--size1u) var(--size1u) var(--size1u);
+    grid-template-rows: var(--size1u);
+    
+    background-color: darkgoldenrod;
+    grid-row-start: 4;
+    grid-row-end: 5;
+
+    grid-column-start:1;
+    grid-column-end:2;
+}
+
+.mainBottomRow
+{
+    grid-template-columns: var(--size1u) var(--size1u) var(--size1u);
+    grid-template-rows: var(--size1u);
+      background-color: darkred;
+    grid-row-start: 5;
+    grid-row-end: 6;
+
+    grid-column-start:1;
+    grid-column-end:2;
+
+}
+

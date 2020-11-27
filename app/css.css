@@ -2,13 +2,18 @@
 /* sizes based on 1u = 18mm  and 4px = 1mm   */
 
 --size1u: 54px; /*72*/
+--size2u: 108px;
 --borderRounding: 5px;
 --sizeKeySpace: 1.5px; /* spacing between the keys */ /*2*/
 
 --sizeVisualKeyBorder: 2px;
 --sizeVisualKeyBorderSides: 12px; 
 
---sizeSectionSpace: 24; /* standard spacing between sections on the board */
+--sizeSectionSpace: 8px; /* standard spacing between sections on the board --TODO*/
+
+
+--functionSectionSpacing: 24px; /* 2x func spacing + 1x Esc Spacing should add up to --size1u (actually slightly less based on margins) */
+--funtionEscSpacing: 60px;
 
 --widthMainArea: calc(  (15 * var(--size1u)) + (30 * var(--sizeKeySpace)));
 --widthNavArea: calc(  (3 * var(--size1u)) + (6 * var(--sizeKeySpace)));
@@ -27,6 +32,10 @@ body {
     display: grid;
     grid-template-columns: var(--widthMainArea) var(--widthNavArea) var(--widthTenKeyArea);
 
-    background-color: #1e1e1e
+    background-color: #1e1e1e;
+
+    
+    column-gap: var(--sizeSectionSpace) ;
+    row-gap: var(--sizeSectionSpace);
 
 }

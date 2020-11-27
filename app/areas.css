@@ -13,18 +13,28 @@
 }
 .functionKeyArea
 {
-    background-color: darkblue;
+    grid-template-columns: var(--size1u) var(--funtionEscSpacing) 
+    var(--size1u) var(--size1u) var(--size1u) var(--size1u)
+    var(--functionSectionSpacing)
+    var(--size1u) var(--size1u) var(--size1u) var(--size1u)
+    var(--functionSectionSpacing)
+    var(--size1u) var(--size1u) var(--size1u) var(--size1u);
+
+    grid-template-rows: var(--size1u);
+
+    /*background-color: darkblue;*/
     grid-row-start: 1;
     grid-row-end: 2;
 
     grid-column-start:1;
     grid-column-end:2;
 }
+
 .functionNavArea
 {
     grid-template-columns: var(--size1u) var(--size1u) var(--size1u);
     grid-template-rows: var(--size1u);
-    background-color: darkred;
+     /* background-color: darkred;*/
     grid-row-start: 1;
     grid-row-end: 2;
 
@@ -35,7 +45,7 @@
 .mediaArea
 {
     grid-template-columns: var(--size1u) var(--size1u) var(--size1u) var(--size1u);
-    background-color: darkolivegreen;
+     /* background-color: darkolivegreen;*/
     grid-row-start: 1;
     grid-row-end: 2;
 
@@ -57,7 +67,7 @@
 {
    grid-template-columns: var(--size1u) var(--size1u) var(--size1u);
    grid-template-rows: var(--size1u) var(--size1u);
-    background-color: dimgray;
+     /* background-color: dimgray;*/
 
     grid-row-start: 2;
     grid-row-end: 3;
@@ -68,7 +78,7 @@
 .midNavArea
 {
     grid-template-columns: var(--size1u) var(--size1u) var(--size1u);
-    background-color:pink;
+     /* background-color:pink;*/
 
     grid-row-start: 3;
     grid-row-end: 4;
@@ -81,7 +91,7 @@
     grid-template-columns: var(--size1u) var(--size1u) var(--size1u);
     grid-template-rows: var(--size1u) var(--size1u);
 
-    background-color: darkgoldenrod;
+   /* background-color: darkgoldenrod;*/
     grid-row-start: 4;
     grid-row-end: 5;
 
@@ -91,7 +101,7 @@
 .tenKeyArea
 {
 
-    background-color: darkslategray;
+     /* background-color: darkslategray;*/
 
     grid-template-columns: var(--size1u) var(--size1u) var(--size1u) var(--size1u);
     
