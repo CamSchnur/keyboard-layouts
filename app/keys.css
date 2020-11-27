@@ -14,21 +14,28 @@
     font-size: 0; 
     line-height: var(--size1u);
     font-family: 'Open Sans', sans-serif;
+
+
     /* thicker border option:
         
+   
     */
-    /* border-left:solid var(--sizeVisualKeyBorderSides) lightblue;
-    border-right:solid var(--sizeVisualKeyBorderSides) lightblue;
-    border-top: solid var(--sizeVisualKeyBorderSides)lightseagreen;
-    border-bottom: solid var(--sizeVisualKeyBorderSides)lightseagreen; */
+
 }
+
+.keyAltStyle
+{
+    border-left:solid var(--sizeVisualKeyBorderSides) lightblue;
+    border-right:solid var(--sizeVisualKeyBorderSides) lightblue;
+    border-top: solid var(--sizeVisualKeyBorderSides) coral;
+    border-bottom: solid var(--sizeVisualKeyBorderSides)coral; 
+    background-color: darksalmon;
+    line-height: calc(var(--size1u) - (2 * var(--sizeVisualKeyBorderSides)));
+    font-size: initial;
+}
+
 .key:hover
 {
-   /* border-left:solid var(--sizeVisualKeyBorderSides) lightblue;
-    border-right:solid var(--sizeVisualKeyBorderSides) lightblue;
-    border-top: solid var(--sizeVisualKeyBorderSides)lightseagreen;
-    border-bottom: solid var(--sizeVisualKeyBorderSides)lightseagreen; */
-
     background-color: lightcyan;
     font-size: initial; 
 }
