@@ -5,9 +5,11 @@
     border-radius: var(--borderRounding);
 
     display: grid;
-    grid-gap: var(--sizeKeySpace);
 
     
+    column-gap: calc( 2 * var(--sizeKeySpace) );
+    row-gap: calc( 2 * var(--sizeKeySpace));
+    padding: var(--sizeKeySpace);
 }
 .functionKeyArea
 {
@@ -21,15 +23,18 @@
 .functionNavArea
 {
     grid-template-columns: var(--size1u) var(--size1u) var(--size1u);
+    grid-template-rows: var(--size1u);
     background-color: darkred;
     grid-row-start: 1;
     grid-row-end: 2;
 
     grid-column-start:2;
     grid-column-end:3;
+
 }
 .mediaArea
 {
+    grid-template-columns: var(--size1u) var(--size1u) var(--size1u) var(--size1u);
     background-color: darkolivegreen;
     grid-row-start: 1;
     grid-row-end: 2;
@@ -51,6 +56,7 @@
 .upperNavArea
 {
    grid-template-columns: var(--size1u) var(--size1u) var(--size1u);
+   grid-template-rows: var(--size1u) var(--size1u);
     background-color: dimgray;
 
     grid-row-start: 2;
@@ -73,6 +79,7 @@
 .lowerNavArea
 {
     grid-template-columns: var(--size1u) var(--size1u) var(--size1u);
+    grid-template-rows: var(--size1u) var(--size1u);
 
     background-color: darkgoldenrod;
     grid-row-start: 4;
@@ -87,6 +94,8 @@
     background-color: darkslategray;
 
     grid-template-columns: var(--size1u) var(--size1u) var(--size1u) var(--size1u);
+    
+    grid-template-rows: var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u);
 
     grid-row-start: 2;
     grid-row-end: 5;
