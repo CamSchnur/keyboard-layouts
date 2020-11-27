@@ -54,7 +54,8 @@
 }
 .mainArea
 {
-    background-color: darkslateblue;
+    grid-template-rows: var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u);
+    /* background-color: darkslateblue;*/
 
     grid-row-start: 2;
     grid-row-end: 5;

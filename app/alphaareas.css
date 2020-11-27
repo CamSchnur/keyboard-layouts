@@ -3,8 +3,6 @@
 {
     grid-template-columns: var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) ;
     grid-template-rows: var(--size1u);
-    
-      background-color: darkslategrey;
 
     grid-row-start: 1;
     grid-row-end: 2;
@@ -15,10 +13,9 @@
 }
 .mainUpperAlphas
 {
-    grid-template-columns: var(--size1u) var(--size1u) var(--size1u);
+    grid-template-columns: var(--size15u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size15u);
     grid-template-rows: var(--size1u);
       
-    background-color: darkseagreen;
     grid-row-start: 2;
     grid-row-end: 3;
 
@@ -29,10 +26,9 @@
 
 .mainMidAlphas
 {
-    grid-template-columns: var(--size1u) var(--size1u) var(--size1u);
+    grid-template-columns: var(--size175u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size225u);
     grid-template-rows: var(--size1u);
       
-    background-color: darkorchid;
     grid-row-start: 3;
     grid-row-end: 4;
 
@@ -43,10 +39,9 @@
 
 .mainLowerAlphas
 {
-    grid-template-columns: var(--size1u) var(--size1u) var(--size1u);
-    grid-template-rows: var(--size1u);
+    grid-template-columns: var(--size225u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size275u);
+     grid-template-rows: var(--size1u);
     
-    background-color: darkgoldenrod;
     grid-row-start: 4;
     grid-row-end: 5;
 
@@ -56,9 +51,9 @@
 
 .mainBottomRow
 {
-    grid-template-columns: var(--size1u) var(--size1u) var(--size1u);
+    grid-template-columns: var(--size15u) var(--size1u) var(--size125u) var(--size65u) var(--size125u) var(--size1u) var(--size1u) var(--size15u);
     grid-template-rows: var(--size1u);
-      background-color: darkred;
+
     grid-row-start: 5;
     grid-row-end: 6;
 

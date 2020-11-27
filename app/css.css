@@ -2,7 +2,14 @@
 /* sizes based on 1u = 18mm  and 4px = 1mm   */
 
 --size1u: 54px; /*72*/
+--size125u: 65px;
+--size15u: 81px;
+--size175u: 94.5px;
 --size2u: 108px;
+--size225u: 121.5px;
+--size275u: 148.5px;
+--size65u: 351px;
+
 --borderRounding: 5px;
 --sizeKeySpace: 1.5px; /* spacing between the keys */ /*2*/
 
