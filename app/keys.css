@@ -11,8 +11,9 @@
 
     vertical-align:middle;
     text-align: center;
+    font-size: 0; 
     line-height: var(--size1u);
-    font-family: Helvetica, 'Lucida Sans', 'Gill-Sans', 'Segoe UI';
+    font-family: 'Open Sans', sans-serif;
     /* thicker border option:
         
     */
@@ -30,6 +31,7 @@
     border-bottom: solid var(--sizeVisualKeyBorderSides)lightseagreen; */
 
     background-color: lightcyan;
+    font-size: initial; 
 }
 
 .emptySpace
