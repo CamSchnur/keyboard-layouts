@@ -1,19 +1,14 @@
 $(document).ready(function() {
     addLayout('100');
-
-    $("#swapLight").click(function() {
-        
-        $('.area').find('.key').addClass('keyAltStyle');
-        $('.area').find('.keyAlpha').addClass('keyAlphaAltStyle');
-        $('.area').find('.keyModifier').addClass('keyModifierAltStyle');
+    setStyle('dark');
+    $("#swapLight").click(function() 
+    {
+        setStyle('light');
 
     })
-    $("#swapDark").click(function() {
-        
-        $('.area').find('.key').removeClass('keyAltStyle');
-        $('.area').find('.keyAlpha').removeClass('keyAlphaAltStyle');
-        $('.area').find('.keyModifier').removeClass('keyModifierAltStyle');
-
+    $("#swapDark").click(function() 
+    {
+        setStyle('dark');
     })
     $("#layout100").click(function() 
     {        
@@ -157,5 +152,24 @@ $(document).ready(function() {
     function setVisibleByClass(elementName, visible)
     {
         setVisible('.' + elementName, visible);
+    }
+    function setStyle(mode)
+    {
+        if(mode == 'dark')
+        {
+            $('.area').find('.key').removeClass('keyAltStyle');
+            $('.area').find('.keyAlpha').removeClass('keyAlphaAltStyle');
+            $('.area').find('.keyModifier').removeClass('keyModifierAltStyle');
+            $('.area').find('.keyAlpha').addClass('keyAlphaMainStyle');
+            $('.area').find('.keyModifier').addClass('keyModifierMainStyle');
+        }
+        else if(mode == 'light')
+        {
+            $('.area').find('.key').addClass('keyAltStyle');
+            $('.area').find('.keyAlpha').addClass('keyAlphaAltStyle');
+            $('.area').find('.keyModifier').addClass('keyModifierAltStyle');
+            $('.area').find('.keyAlpha').removeClass('keyAlphaMainStyle');
+            $('.area').find('.keyModifier').removeClass('keyModifierMainStyle');
+        }
     }
 });

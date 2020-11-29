@@ -16,15 +16,19 @@
     line-height: var(--size1u);
     font-family: 'Open Sans', sans-serif;
 
-    transition:  background-color 0.1s,border 0.5s, line-height 0.5s, font-size 0.1s;
+    transition:  background-color 0.25s,border 0.25s, line-height 0.25s, font-size 0.25s;
     /* thicker border option:
         
    
     */
 }
-.keyAlpha
+.keyAlphaMainStyle
 {
 
+}
+.keyAlphaMainStyle:hover
+{
+    background-color: lightcyan;
 }
 .keyAlphaAltStyle
 {
@@ -34,9 +38,17 @@
     border-top: solid var(--sizeVisualKeyBorderSides) lightgoldenrodyellow;
     border-bottom: solid var(--sizeVisualKeyBorderSides)lightgoldenrodyellow; 
 }
-
-.keyModifier
+.keyAlphaAltStyle:hover
 {
+    background-color: goldenrod;
+}
+.keyModifierMainStyle
+{
+
+}
+.keyModifierMainStyle:hover
+{
+    background-color: lightcyan;
 }
 .keyModifierAltStyle
 {
@@ -46,19 +58,16 @@
     border-top: solid var(--sizeVisualKeyBorderSides) paleturquoise;
     border-bottom: solid var(--sizeVisualKeyBorderSides)paleturquoise; 
 }
+.keyModifierAltStyle:hover
+{
+    background-color: lightseagreen;
+}
 .keyAltStyle
 {
     font-size: 10; 
     line-height: calc(var(--size1u) - (2 * var(--sizeVisualKeyBorderSides)));
 }
-.keyModifierAltStyle:hover
-{
-    //todo
-}
-.key:hover
-{
-    background-color: lightcyan;
-}
+
 
 .gridTenKeyPlus
 {
