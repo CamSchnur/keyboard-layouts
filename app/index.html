@@ -4,68 +4,84 @@
         <link rel="stylesheet" href="css.css">
         <link rel="stylesheet" href="keys.css">
         <link rel="stylesheet" href="areas.css">
+        <link rel="stylesheet" href="sitelayout.css">
         <link rel="stylesheet" href="alphaareas.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
     </head>
     <body>
-        <div class = "select">
-
+        <div class="page">
+            <div class="siteTitle">
+                kbd layout
+            </div>
+        <div class="siteSlider">
+                <input type="range" min="1" max="6" class="selector" id="rangeSelector">
+                <button id="layout40">40%</button>
+                <button id="layout60">60%</button>
+                <button id="layout65">65%</button>
+                <button id="layout68">68%</button>
+                <button id="layout75">75%</button>
+                <button id="layoutTKL">TKL</button>
+                <button id="layout100">100%</button>
         </div>
-        <div class="keyboard">
-            <div class="functionKeyArea area">
-                <div class="key">Esc</div><div class=""></div>
-                <div class="key">F1</div><div class="key">F2</div><div class="key">F3</div><div class="key">F4</div>
-                <div></div>
-                <div class="key">F5</div><div class="key">F6</div><div class="key">F7</div><div class="key">F8</div>
-                <div></div>
-                <div class="key">F9</div><div class="key">F10</div><div class="key">F11</div><div class="key">F12</div>
+        <div class="siteKeyboard">
+            <div class="keyboard">
+                <div class="functionKeyArea area">
+                    <div class="key">Esc</div><div class=""></div>
+                    <div class="key">F1</div><div class="key">F2</div><div class="key">F3</div><div class="key">F4</div>
+                    <div></div>
+                    <div class="key">F5</div><div class="key">F6</div><div class="key">F7</div><div class="key">F8</div>
+                    <div></div>
+                    <div class="key">F9</div><div class="key">F10</div><div class="key">F11</div><div class="key">F12</div>
+                </div>
+                <div class="functionNavArea area"><div class="key size1u">Print</div><div class="key size1u">Scr</div><div class="key">Pause</div></div>
+                <div class="mediaArea area"></div>
+                <div class="mainArea area">
+                    <div class="mainNumberRow area">
+                        <div class="key">~</div><div class="key">1</div><div class="key">2</div><div class="key">3</div><div class="key">4</div><div class="key">5</div><div class="key">6</div><div class="key">7</div><div class="key">8</div><div class="key">9</div><div class="key">0</div><div class="key">-</div><div class="key">=</div><div class="key backSpace">Backspace</div>
+                    </div>
+                    <div class="mainUpperAlphas area">
+                        <div class="key">Tab</div><div class="key">Q</div><div class="key">W</div><div class="key">E</div><div class="key">R</div><div class="key">T</div><div class="key">Y</div><div class="key">U</div><div class="key">I</div><div class="key">O</div><div class="key">P</div><div class="key">[</div><div class="key">]</div><div class="key">\</div>
+                    </div>
+                    <div class="mainMidAlphas area">
+                        <div class="key">Capslock</div><div class="key">A</div><div class="key">S</div><div class="key">D</div><div class="key">F</div><div class="key">G</div><div class="key">H</div><div class="key">J</div><div class="key">K</div><div class="key">L</div><div class="key">;</div><div class="key">"</div><div class="key">Enter</div>
+                    </div>
+                    <div class="mainLowerAlphas area">
+                    <div class="key">Shift</div><div class="key">Z</div><div class="key">X</div><div class="key">C</div><div class="key">V</div><div class="key">B</div><div class="key">N</div><div class="key">M</div><div class="key">,</div><div class="key">.</div><div class="key">?</div><div class="key">Shift</div>
+                    </div>
+                    <div class="mainBottomRow area">
+                    <div class="key">Ctrl</div><div class="key">Win</div><div class="key">Alt</div><div class="key"> </div><div class="key">Alt</div><div class="key">Win</div><div class="key">Fn</div><div class="key">Ctrl</div>
+                    </div>
+                </div>
+                <div class="upperNavArea area">
+                    <div class="key">Ins</div><div class="key">Home</div><div class="key">Pg Up</div>
+                    <div class="key">Del</div><div class="key">End</div><div class="key">Pg Dn</div>
+                </div>
+                <div class="midNavArea area">
+                    <div class="emptySpace"></div>
+                </div>
+                <div class="lowerNavArea area">
+                    <div class="emptySpace"></div><div class="key">Up</div><div class="emptySpace"></div>
+                    <div class="key">Left</div><div class="key">Down</div><div class="key">Right</div>         
+                </div>
+                <div class="tenKeyArea area">
+                    <div class="key">Num</div><div class="key">/</div><div class="key">*</div>
+                    <div class="key">-</div>
+                    <div class="key">7</div><div class="key">8</div><div class="key">9</div>
+                    <div class="key">4</div><div class="key">5</div><div class="key">6</div>
+                    <div class="key">1</div><div class="key">2</div><div class="key">3</div>
+                    <div class="key gridTenKeyZero">0</div><div class="key">.</div>
+                    <div class="key gridTenKeyPlus">+</div>
+                    <div class="key gridTenKeyEnter">Enter</div>
+                </div>
+            </div>
         </div>
-            <div class="functionNavArea area"><div class="key size1u">Print</div><div class="key size1u">Scr</div><div class="key">Pause</div></div>
-            <div class="mediaArea area"></div>
-            <div class="mainArea area">
-                <div class="mainNumberRow area">
-                    <div class="key">~</div><div class="key">1</div><div class="key">2</div><div class="key">3</div><div class="key">4</div><div class="key">5</div><div class="key">6</div><div class="key">7</div><div class="key">8</div><div class="key">9</div><div class="key">0</div><div class="key">-</div><div class="key">=</div><div class="key backSpace">Backspace</div>
-                </div>
-                <div class="mainUpperAlphas area">
-                    <div class="key">Tab</div><div class="key">Q</div><div class="key">W</div><div class="key">E</div><div class="key">R</div><div class="key">T</div><div class="key">Y</div><div class="key">U</div><div class="key">I</div><div class="key">O</div><div class="key">P</div><div class="key">[</div><div class="key">]</div><div class="key">\</div>
-                </div>
-                <div class="mainMidAlphas area">
-                    <div class="key">Capslock</div><div class="key">A</div><div class="key">S</div><div class="key">D</div><div class="key">F</div><div class="key">G</div><div class="key">H</div><div class="key">J</div><div class="key">K</div><div class="key">L</div><div class="key">;</div><div class="key">"</div><div class="key">Enter</div>
-                </div>
-                <div class="mainLowerAlphas area">
-                  <div class="key">Shift</div><div class="key">Z</div><div class="key">X</div><div class="key">C</div><div class="key">V</div><div class="key">B</div><div class="key">N</div><div class="key">M</div><div class="key">,</div><div class="key">.</div><div class="key">?</div><div class="key">Shift</div>
-                </div>
-                <div class="mainBottomRow area">
-                  <div class="key">Ctrl</div><div class="key">Win</div><div class="key">Alt</div><div class="key"> </div><div class="key">Alt</div><div class="key">Win</div><div class="key">Fn</div><div class="key">Ctrl</div>
-                </div>
-            </div>
-            <div class="upperNavArea area">
-                <div class="key">Ins</div><div class="key">Home</div><div class="key">Pg Up</div>
-                <div class="key">Del</div><div class="key">End</div><div class="key">Pg Dn</div>
-            </div>
-            <div class="midNavArea area">
-                <div class="emptySpace"></div>
-            </div>
-            <div class="lowerNavArea area">
-                <div class="emptySpace"></div><div class="key">Up</div><div class="emptySpace"></div>
-                <div class="key">Left</div><div class="key">Down</div><div class="key">Right</div>         
-            </div>
-            <div class="tenKeyArea area">
-                <div class="key">Num</div><div class="key">/</div><div class="key">*</div>
-                <div class="key">-</div>
-                <div class="key">7</div><div class="key">8</div><div class="key">9</div>
-                <div class="key">4</div><div class="key">5</div><div class="key">6</div>
-                <div class="key">1</div><div class="key">2</div><div class="key">3</div>
-                <div class="key gridTenKeyZero">0</div><div class="key">.</div>
-                <div class="key gridTenKeyPlus">+</div>
-                <div class="key gridTenKeyEnter">Enter</div>
-            </div>
+        <div class="siteMoreInfo"></div>
+        <div class="siteConfig">
+            <button id="swapLight">Light Style</button>
+            <button id="swapDark">Dark Style</button>
         </div>
-        Hello
-        <button id="swapLight">Light Style</button>
-        <button id="swapDark">Dark Style</button>
-
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="javascript.js"></script>
     </body>

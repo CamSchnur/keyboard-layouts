@@ -33,16 +33,35 @@ body {
 .keyboard
 {
     border-radius: var(--borderRounding);
-    position:absolute;
-    left:20%;
-    top:20%;
     display: grid;
-    grid-template-columns: var(--widthMainArea) var(--widthNavArea) var(--widthTenKeyArea);
+    transition: grid-template-columns 1s;
 
     background-color: #1e1e1e;
 
-    
-    column-gap: var(--sizeSectionSpace) ;
-    row-gap: var(--sizeSectionSpace);
 
+}
+
+.keyboard100
+{
+    grid-template-columns: var(--widthMainArea) var(--widthNavArea) var(--widthTenKeyArea);
+    column-gap: var(--sizeSectionSpace);
+    row-gap: var(--sizeSectionSpace);
+}
+.keyboardTKL
+{
+    grid-template-columns: var(--widthMainArea) var(--widthNavArea);
+    column-gap: var(--sizeSectionSpace);
+    row-gap: var(--sizeSectionSpace);
+}
+
+.hiddenElement
+{
+    opacity: 0;
+    transition: opacity 1s;
+    display:hidden;
+}
+.visibleElement
+{
+    opacity: 1;
+    transition: opacity 1s;
 }
