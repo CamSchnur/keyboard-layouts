@@ -1,7 +1,6 @@
 $(document).ready(function() {
     addLayout('100');
 
-
     $("#swapLight").click(function() {
         
         $('.area').find('.key').addClass('keyAltStyle');
@@ -29,6 +28,7 @@ $(document).ready(function() {
         removeAllLayouts();
         $('.keyboard').addClass('keyboard' + layout);
         
+        
         //deal with the tenkey/numpad
         if(layout == '100')
         {
@@ -53,6 +53,7 @@ $(document).ready(function() {
                 break;          
             case '75':
                 //this model has a weird function row
+                //todo
                 break;
             default:
                 //these models do not have a function row:
@@ -78,18 +79,42 @@ $(document).ready(function() {
                 //these models have a weird nav area:
                 break;
             default:
-                //these models do not have a function row:
+                //these models do not have a nav area:
                 setVisible('.upperNavArea', false);
                 setVisible('.midNavArea', false);
                 setVisible('.lowerNavArea', false);
+
                 break;     
         }
 
+        //deal with the main area
+        switch(layout)
+        {
+            case 'TKL':
+            case '100':
+                //these models have a regular main area 
+                $('.mainArea').addClass('mainArea100');
+                break;          
+            case '75':
+                //function area is compacted
+                $('.mainArea').addClass('mainArea75');
+                break;
+            case '68':
+            case '65':
+            case '60':
+                //function area is gone
+                $('.mainArea').addClass('mainAreaCompact');
+                break;
+            default:
+                $('.mainArea').addClass('mainArea40');
+                break;     
+        }
         
     }
     function removeLayout(layout)
     {
         $('.keyboard').removeClass('keyboard' + layout);
+        $('.mainArea').removeClass('mainArea' + layout);
     }
     function removeAllLayouts()
     {
@@ -100,6 +125,7 @@ $(document).ready(function() {
         removeLayout('65');
         removeLayout('60');
         removeLayout('40');
+        removeLayout('Compact');
     }
     function setVisible(elementName, visible)
     {

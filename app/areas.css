@@ -52,18 +52,56 @@
     grid-column-start:3;
     grid-column-end:4;
 }
+
+/* 
+    Layouts for Main Area
+*/
 .mainArea
 {
+    transition: grid-template-columns 1s, grid-template-rows 1s;
+}
+.mainArea100
+{
+    /* separated function row */
     grid-template-rows: var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u);
-    /* background-color: darkslateblue;*/
 
     grid-row-start: 2;
-    grid-row-end: 5;
+    grid-row-end: 6;
+
+    grid-column-start:1;
+    grid-column-end:2;
+}
+.mainArea75
+{
+    /* integrated function row */
+}
+.mainAreaCompact
+{
+    /* no function row */
+    grid-template-rows: var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u);
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    grid-column-start:1;
+    grid-column-end:2;
+}
+.mainArea40
+{
+    /* no number keys */
+    grid-template-rows:  0px var(--size1u) var(--size1u) var(--size1u) var(--size1u);
+
+    grid-row-start: 1;
+    grid-row-end: 4;
 
     grid-column-start:1;
     grid-column-end:2;
 }
 
+
+/* 
+    Layouts for Nav Area 
+*/
 .upperNavArea
 {
    grid-template-columns: var(--size1u) var(--size1u) var(--size1u);

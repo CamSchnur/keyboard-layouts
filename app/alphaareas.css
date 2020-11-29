@@ -40,7 +40,7 @@
 .mainLowerAlphas
 {
     grid-template-columns: var(--size225u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size275u);
-     grid-template-rows: var(--size1u);
+    grid-template-rows: var(--size1u);
     
     grid-row-start: 4;
     grid-row-end: 5;

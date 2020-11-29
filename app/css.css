@@ -33,26 +33,32 @@ body {
 {
     border-radius: var(--borderRounding);
     display: grid;
-    transition: grid-template-columns 1s;
+    transition: grid-template-columns 1s, grid-template-rows 1s;
 
     background-color: #1e1e1e;
 
-    column-gap: var(--sizeSectionSpace);
-    row-gap: var(--sizeSectionSpace);
 
 }
 
 .keyboard100
 {
     grid-template-columns: var(--widthMainArea) var(--widthNavArea) var(--widthTenKeyArea);
+    grid-template-rows: auto auto auto auto;
+    column-gap: var(--sizeSectionSpace);
+    row-gap: var(--sizeSectionSpace);
 }
 .keyboardTKL
 {
     grid-template-columns: var(--widthMainArea) var(--widthNavArea) 0px;
+    column-gap: var(--sizeSectionSpace);
+    row-gap: var(--sizeSectionSpace);
 }
 .keyboard60
 {
     grid-template-columns: var(--widthMainArea) 0px 0px;
+    grid-template-rows: auto 0px 0px 0px;
+    column-gap: 0px;
+    row-gap: 0px;
 }
 
 .hiddenElement
@@ -61,6 +67,7 @@ body {
     display:none;
     visibility: hidden;
     transition: opacity 1s, display 1s, visibility 1s;
+    grid-template-rows: 0px;
 }
 .visibleElement
 {
