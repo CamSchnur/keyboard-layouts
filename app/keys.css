@@ -16,25 +16,45 @@
     line-height: var(--size1u);
     font-family: 'Open Sans', sans-serif;
 
-
+    transition:  background-color 0.1s,border 0.5s, line-height 0.5s, font-size 0.1s;
     /* thicker border option:
         
    
     */
+}
+.keyAlpha
+{
 
 }
-
-.keyAltStyle
+.keyAlphaAltStyle
 {
+    background-color: lightyellow;
+    border-left:solid var(--sizeVisualKeyBorderSides) beige;
+    border-right:solid var(--sizeVisualKeyBorderSides) beige;
+    border-top: solid var(--sizeVisualKeyBorderSides) lightgoldenrodyellow;
+    border-bottom: solid var(--sizeVisualKeyBorderSides)lightgoldenrodyellow; 
+}
+
+.keyModifier
+{
+}
+.keyModifierAltStyle
+{
+    background-color: lightcyan;
     border-left:solid var(--sizeVisualKeyBorderSides) lightblue;
     border-right:solid var(--sizeVisualKeyBorderSides) lightblue;
-    border-top: solid var(--sizeVisualKeyBorderSides) coral;
-    border-bottom: solid var(--sizeVisualKeyBorderSides)coral; 
-    background-color: darksalmon;
-    line-height: calc(var(--size1u) - (2 * var(--sizeVisualKeyBorderSides)));
-    font-size: initial;
+    border-top: solid var(--sizeVisualKeyBorderSides) paleturquoise;
+    border-bottom: solid var(--sizeVisualKeyBorderSides)paleturquoise; 
 }
-
+.keyAltStyle
+{
+    font-size: 10; 
+    line-height: calc(var(--size1u) - (2 * var(--sizeVisualKeyBorderSides)));
+}
+.keyModifierAltStyle:hover
+{
+    //todo
+}
 .key:hover
 {
     background-color: lightcyan;

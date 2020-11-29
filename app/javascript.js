@@ -4,11 +4,15 @@ $(document).ready(function() {
     $("#swapLight").click(function() {
         
         $('.area').find('.key').addClass('keyAltStyle');
+        $('.area').find('.keyAlpha').addClass('keyAlphaAltStyle');
+        $('.area').find('.keyModifier').addClass('keyModifierAltStyle');
 
     })
     $("#swapDark").click(function() {
         
         $('.area').find('.key').removeClass('keyAltStyle');
+        $('.area').find('.keyAlpha').removeClass('keyAlphaAltStyle');
+        $('.area').find('.keyModifier').removeClass('keyModifierAltStyle');
 
     })
     $("#layout100").click(function() 
