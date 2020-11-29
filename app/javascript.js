@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    applyLayout(100);
+    addLayout(100);
 
 
     $("#swapLight").click(function() {
@@ -12,24 +12,45 @@ $(document).ready(function() {
         $('.area').find('.key').removeClass('keyAltStyle');
 
     })
-    $("#layout100").click(function() {
-        removeAllLayouts();
-        addLayout(100);
-       // $('.keyboard').addClass('keyboard100');
-       // $('.keyboard').find('.tenKeyArea').removeClass('hiddenElement');
-        //$('.keyboard').find('.tenKeyArea').addClass('visibleElement');
-
+    $("#layout100").click(function() 
+    {        
+        addLayout('100');
     })
     $("#layoutTKL").click(function() {
-        removeAllLayouts();
+        
         addLayout('TKL');
-       // $('.keyboard').addClass('keyboardTKL');
-       // $('.tenKeyArea').removeClass('visibleElement');
-       // $('.tenKeyArea').addClass('hiddenElement');
     })
-    function applyLayout(layout)
+    $("#layout60").click(function() {
+        
+        addLayout('60');
+    })
+    function addLayout(layout)
     {
+        removeAllLayouts();
         $('.keyboard').addClass('keyboard' + layout);
+        
+        //deal with the tenkey/numpad
+        if(layout == '100')
+        {
+            //this model has a tenkey
+            setVisible('.tenKeyArea', true);
+        }
+        else
+        {
+            //all other models do not
+            setVisible('.tenKeyArea', false);
+        }
+
+        //deal with the function row
+        if(layout == '75' || layout == 'TKL' || layout == '100')
+        {
+            //these models have a function row 
+            setVisible('.functionKeyArea', true);
+        }
+        else
+        {
+            setVisible('.functionKeyArea', false);
+        }
     }
     function removeLayout(layout)
     {
@@ -40,5 +61,17 @@ $(document).ready(function() {
         removeLayout('100');
         removeLayout('TKL');
     }
-    
+    function setVisible(elementName, visible)
+    {
+        if(visible)
+        {
+            $(elementName).removeClass('hiddenElement');
+            $(elementName).addClass('visibleElement');
+        }
+        else
+        {
+            $(elementName).removeClass('visibleElement');
+            $(elementName).addClass('hiddenElement');
+        }
+    }
 });

@@ -79,6 +79,7 @@
 .midNavArea
 {
     grid-template-columns: var(--size1u) var(--size1u) var(--size1u);
+    grid-template-rows: calc(var(--size1u) - (2 * var(--sizeSectionSpace)));
      /* background-color:pink;*/
 
     grid-row-start: 3;
