@@ -27,17 +27,15 @@
 --widthTenKeyArea:calc(  (4 * var(--size1u)) + (8 * var(--sizeKeySpace)));
 }
 body {
-    background-color: #2e2e2e
+    background-color: #1e1e1e;
 }
 .keyboard
 {
     border-radius: var(--borderRounding);
     display: grid;
-    transition: grid-template-columns 1s, grid-template-rows 1s;
+    transition: grid-template-columns 1s, grid-template-rows 1s, column-gap 1s, row-gap 1s;
 
-    background-color: #1e1e1e;
-
-
+   /* background-color: #2e2e2e */
 }
 
 .keyboard100
@@ -50,13 +48,14 @@ body {
 .keyboardTKL
 {
     grid-template-columns: var(--widthMainArea) var(--widthNavArea) 0px;
+    grid-template-rows: auto auto auto auto;
     column-gap: var(--sizeSectionSpace);
     row-gap: var(--sizeSectionSpace);
 }
 .keyboard60
 {
     grid-template-columns: var(--widthMainArea) 0px 0px;
-    grid-template-rows: auto 0px 0px 0px;
+    grid-template-rows: 0px auto auto auto;
     column-gap: 0px;
     row-gap: 0px;
 }
@@ -66,7 +65,6 @@ body {
     opacity: 0;
     display:none;
     visibility: hidden;
-    transition: opacity 1s, display 1s, visibility 1s;
     grid-template-rows: 0px;
 }
 .visibleElement
@@ -74,5 +72,4 @@ body {
     opacity: 1;
     display:initial;
     visibility:initial;
-    transition: opacity 1s, display 1s, visibility 1s;
 }

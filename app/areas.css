@@ -1,3 +1,4 @@
+
 .area
 {
     display: table;
@@ -10,6 +11,8 @@
     column-gap: calc( 2 * var(--sizeKeySpace) );
     row-gap: calc( 2 * var(--sizeKeySpace));
     padding: var(--sizeKeySpace);
+    
+    transition: grid-template-columns 1s, grid-template-rows 1s, column-gap 1s, row-gap 1s, opacity 1s, display 1s, visibility 1s;
 }
 .functionKeyArea
 {
@@ -58,7 +61,6 @@
 */
 .mainArea
 {
-    transition: grid-template-columns 1s, grid-template-rows 1s;
 }
 .mainArea100
 {
@@ -80,8 +82,9 @@
     /* no function row */
     grid-template-rows: var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u);
 
-    grid-row-start: 1;
-    grid-row-end: 2;
+
+    grid-row-start: 2;
+    grid-row-end: 6;
 
     grid-column-start:1;
     grid-column-end:2;
@@ -91,8 +94,9 @@
     /* no number keys */
     grid-template-rows:  0px var(--size1u) var(--size1u) var(--size1u) var(--size1u);
 
-    grid-row-start: 1;
-    grid-row-end: 4;
+
+    grid-row-start: 2;
+    grid-row-end: 6;
 
     grid-column-start:1;
     grid-column-end:2;
