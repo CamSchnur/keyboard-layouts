@@ -23,6 +23,10 @@ $(document).ready(function() {
         
         addLayout('60');
     })
+    $("#layout65").click(function() {
+        
+        addLayout('65');
+    })
     function addLayout(layout)
     {
         removeAllLayouts();
@@ -33,12 +37,12 @@ $(document).ready(function() {
         if(layout == '100')
         {
             //this model has a tenkey
-            setVisible('.tenKeyArea', true);
+            setVisibleByClass('tenKeyArea', true);
         }
         else
         {
             //all other models do not
-            setVisible('.tenKeyArea', false);
+            setVisibleByClass('tenKeyArea', false);
         }
 
         //deal with the function row
@@ -47,9 +51,9 @@ $(document).ready(function() {
             case 'TKL':
             case '100':
                 //these models have a regular function row 
-                setVisible('.functionKeyArea', true);
-                setVisible('.functionNavArea', true);
-                setVisible('.mediaArea', true);
+                setVisibleByClass('functionKeyArea', true);
+                setVisibleByClass('functionNavArea', true);
+                setVisibleByClass('mediaArea', true);
                 break;          
             case '75':
                 //this model has a weird function row
@@ -57,9 +61,9 @@ $(document).ready(function() {
                 break;
             default:
                 //these models do not have a function row:
-                setVisible('.functionKeyArea', false);
-                setVisible('.functionNavArea', false);
-                setVisible('.mediaArea', false);
+                setVisibleByClass('functionKeyArea', false);
+                setVisibleByClass('functionNavArea', false);
+                setVisibleByClass('mediaArea', false);
                 break;     
         }
 
@@ -69,9 +73,9 @@ $(document).ready(function() {
             case 'TKL':
             case '100':
                 //these models have a regular nav area 
-                setVisible('.upperNavArea', true);
-                setVisible('.midNavArea', true);
-                setVisible('.lowerNavArea', true);
+                setVisibleByClass('upperNavArea', true);
+                setVisibleByClass('midNavArea', true);
+                setVisibleByClass('lowerNavArea', true);
                 break;          
             case '75':
             case '68':
@@ -80,9 +84,9 @@ $(document).ready(function() {
                 break;
             default:
                 //these models do not have a nav area:
-                setVisible('.upperNavArea', false);
-                setVisible('.midNavArea', false);
-                setVisible('.lowerNavArea', false);
+                setVisibleByClass('upperNavArea', false);
+                setVisibleByClass('midNavArea', false);
+                setVisibleByClass('lowerNavArea', false);
 
                 break;     
         }
@@ -109,12 +113,14 @@ $(document).ready(function() {
                 $('.mainArea').addClass('mainArea40');
                 break;     
         }
-        
+        setVisibleByID('moreInfo' + layout, true);
     }
     function removeLayout(layout)
     {
         $('.keyboard').removeClass('keyboard' + layout);
         $('.mainArea').removeClass('mainArea' + layout);
+        setVisibleByID('moreInfo' + layout, false);
+        
     }
     function removeAllLayouts()
     {
@@ -139,5 +145,13 @@ $(document).ready(function() {
             $(elementName).removeClass('visibleElement');
             $(elementName).addClass('hiddenElement');
         }
+    }
+    function setVisibleByID(elementID, visible)
+    {
+        setVisible('#' + elementID, visible);
+    }
+    function setVisibleByClass(elementName, visible)
+    {
+        setVisible('.' + elementName, visible);
     }
 });

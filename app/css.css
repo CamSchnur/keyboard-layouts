@@ -55,7 +55,7 @@ body {
 .keyboard60
 {
     grid-template-columns: var(--widthMainArea) 0px 0px;
-    grid-template-rows: 0px auto auto auto;
+    grid-template-rows: 55px auto auto auto;
     column-gap: 0px;
     row-gap: 0px;
 }
@@ -72,4 +72,11 @@ body {
     opacity: 1;
     display:initial;
     visibility:initial;
+}
+
+.infoPanel
+{
+    color: lightcyan;
+    font-size: large;
+    font-family: 'Open Sans', sans-serif;
 }

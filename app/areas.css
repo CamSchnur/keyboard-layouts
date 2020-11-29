@@ -1,13 +1,11 @@
 
 .area
 {
-    display: table;
     padding: 0;
     border-radius: var(--borderRounding);
 
     display: grid;
 
-    
     column-gap: calc( 2 * var(--sizeKeySpace) );
     row-gap: calc( 2 * var(--sizeKeySpace));
     padding: var(--sizeKeySpace);
