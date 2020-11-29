@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    addLayout(100);
+    addLayout('100');
 
 
     $("#swapLight").click(function() {
@@ -42,15 +42,50 @@ $(document).ready(function() {
         }
 
         //deal with the function row
-        if(layout == '75' || layout == 'TKL' || layout == '100')
+        switch(layout)
         {
-            //these models have a function row 
-            setVisible('.functionKeyArea', true);
+            case 'TKL':
+            case '100':
+                //these models have a regular function row 
+                setVisible('.functionKeyArea', true);
+                setVisible('.functionNavArea', true);
+                setVisible('.mediaArea', true);
+                break;          
+            case '75':
+                //this model has a weird function row
+                break;
+            default:
+                //these models do not have a function row:
+                setVisible('.functionKeyArea', false);
+                setVisible('.functionNavArea', false);
+                setVisible('.mediaArea', false);
+                break;     
         }
-        else
+
+        //deal with the nav area
+        switch(layout)
         {
-            setVisible('.functionKeyArea', false);
+            case 'TKL':
+            case '100':
+                //these models have a regular nav area 
+                setVisible('.upperNavArea', true);
+                setVisible('.midNavArea', true);
+                setVisible('.lowerNavArea', true);
+                break;          
+            case '75':
+            case '68':
+            case '65':
+                //these models have a weird nav area:
+                break;
+            default:
+                //these models do not have a function row:
+                setVisible('.upperNavArea', false);
+                setVisible('.midNavArea', false);
+                setVisible('.lowerNavArea', false);
+                break;     
         }
+
+        
     }
     function removeLayout(layout)
     {
@@ -60,6 +95,11 @@ $(document).ready(function() {
     {
         removeLayout('100');
         removeLayout('TKL');
+        removeLayout('75');
+        removeLayout('68');
+        removeLayout('65');
+        removeLayout('60');
+        removeLayout('40');
     }
     function setVisible(elementName, visible)
     {
