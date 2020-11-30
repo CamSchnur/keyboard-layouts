@@ -41,21 +41,21 @@ body {
 .keyboard100
 {
     grid-template-columns: var(--widthMainArea) var(--widthNavArea) var(--widthTenKeyArea);
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: var(--size1u) auto auto auto;
     column-gap: var(--sizeSectionSpace);
     row-gap: var(--sizeSectionSpace);
 }
 .keyboardTKL
 {
     grid-template-columns: var(--widthMainArea) var(--widthNavArea) 0px;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows:  var(--size1u)  auto auto auto;
     column-gap: var(--sizeSectionSpace);
     row-gap: var(--sizeSectionSpace);
 }
 .keyboard60
 {
     grid-template-columns: var(--widthMainArea) 0px 0px;
-    grid-template-rows: 55px auto auto auto;
+    grid-template-rows: 0px auto auto auto; 
     column-gap: 0px;
     row-gap: 0px;
 }
@@ -66,12 +66,14 @@ body {
     display:none;
     visibility: hidden;
     grid-template-rows: 0px;
+    transition: opacity 0.5s, display 0.5s, visibility 0.5s;
 }
 .visibleElement
 {
     opacity: 1;
     display:initial;
     visibility:initial;
+    transition: opacity 1s ease-in, display 1s ease-in, visibility 1s ease-in;
 }
 
 .infoPanel

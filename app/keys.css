@@ -16,7 +16,7 @@
     line-height: var(--size1u);
     font-family: 'Open Sans', sans-serif;
 
-    transition:  background-color 0.25s,border 0.25s, line-height 0.25s, font-size 0.25s;
+    transition: border 0.25s, line-height 0.25s, font-size 0.25s;
     /* thicker border option:
         
    
