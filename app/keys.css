@@ -12,7 +12,6 @@
     vertical-align:middle;
     text-align: center;
     font-size: 10; 
-    color: gray;
     line-height: var(--size1u);
     font-family: 'Open Sans', sans-serif;
 
@@ -24,7 +23,7 @@
 }
 .keyAlphaMainStyle
 {
-
+    color: gray;
 }
 .keyAlphaMainStyle:hover
 {
@@ -32,6 +31,7 @@
 }
 .keyAlphaAltStyle
 {
+    color: darkslategray;
     background-color: lightyellow;
     border-left:solid var(--sizeVisualKeyBorderSides) beige;
     border-right:solid var(--sizeVisualKeyBorderSides) beige;
@@ -40,11 +40,12 @@
 }
 .keyAlphaAltStyle:hover
 {
-    background-color: goldenrod;
+    background-color: gainsboro;
+    border: solid var(--sizeVisualKeyBorderSides) lightgray;
 }
 .keyModifierMainStyle
 {
-
+    color: gray;
 }
 .keyModifierMainStyle:hover
 {
@@ -52,6 +53,7 @@
 }
 .keyModifierAltStyle
 {
+    color: darkslategray;
     background-color: lightcyan;
     border-left:solid var(--sizeVisualKeyBorderSides) lightblue;
     border-right:solid var(--sizeVisualKeyBorderSides) lightblue;
@@ -60,7 +62,8 @@
 }
 .keyModifierAltStyle:hover
 {
-    background-color: lightseagreen;
+    background-color: gainsboro;
+    border: solid var(--sizeVisualKeyBorderSides) lightgray;
 }
 .keyAltStyle
 {

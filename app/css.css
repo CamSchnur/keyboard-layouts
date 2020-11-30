@@ -34,10 +34,17 @@ body {
     border-radius: var(--borderRounding);
     display: grid;
     transition: grid-template-columns 1s, grid-template-rows 1s, column-gap 1s, row-gap 1s;
-
-   /* background-color: #2e2e2e */
+    border: solid 1px pink;
+    padding: 4px;
 }
-
+.keyboardDark
+{
+    background-color: initial;
+}
+.keyboardLight
+{
+    background-color: gainsboro;
+}
 .keyboard100
 {
     grid-template-columns: var(--widthMainArea) var(--widthNavArea) var(--widthTenKeyArea);

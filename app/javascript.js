@@ -4,7 +4,6 @@ $(document).ready(function() {
     $("#swapLight").click(function() 
     {
         setStyle('light');
-
     })
     $("#swapDark").click(function() 
     {
@@ -162,6 +161,8 @@ $(document).ready(function() {
             $('.area').find('.keyModifier').removeClass('keyModifierAltStyle');
             $('.area').find('.keyAlpha').addClass('keyAlphaMainStyle');
             $('.area').find('.keyModifier').addClass('keyModifierMainStyle');
+            $('.keyboard').removeClass('keyboardLight');
+            $('.keyboard').addClass('keyboardDark');
         }
         else if(mode == 'light')
         {
@@ -170,6 +171,8 @@ $(document).ready(function() {
             $('.area').find('.keyModifier').addClass('keyModifierAltStyle');
             $('.area').find('.keyAlpha').removeClass('keyAlphaMainStyle');
             $('.area').find('.keyModifier').removeClass('keyModifierMainStyle');
+            $('.keyboard').removeClass('keyboardDark');
+            $('.keyboard').addClass('keyboardLight');
         }
     }
 });
