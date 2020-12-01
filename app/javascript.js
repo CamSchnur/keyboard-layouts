@@ -72,23 +72,22 @@ $(document).ready(function() {
             case '100':
                 //these models have a regular nav area 
                 setVisibleByClass('upperNavArea', true);
-                setVisibleByClass('midNavArea', true);
                 setVisibleByClass('lowerNavArea', true);
+                setUpperNavArea('100');
                 break;          
             case '75':
             case '68':
             case '65':
                 //these models have a weird nav area:
                 setVisibleByClass('upperNavArea', true);
-                setVisibleByClass('midNavArea', false);
                 setVisibleByClass('lowerNavArea', true);
+                setUpperNavArea('Compact');
                 break;
             default:
                 //these models do not have a nav area:
                 setVisibleByClass('upperNavArea', false);
-                setVisibleByClass('midNavArea', false);
                 setVisibleByClass('lowerNavArea', false);
-
+                setUpperNavArea('100');
                 break;     
         }
 
@@ -100,6 +99,7 @@ $(document).ready(function() {
                 //no room for arrow keys (they are over in standard nav area)
                 setLayoutByClass('mainBottomRow', '100');
                 setLayoutByClass('mainLowerAlphas', '100');
+                setVisibleByID('keyRightWin', true);
                 //regular number row
                 setLayoutByClass('mainArea', '100');
                 break;
@@ -108,6 +108,7 @@ $(document).ready(function() {
                 //arrow keys are integrated    /* shortened right shift key, and tighter bottom row, to allow arrow keys to nestle in  */
                 setLayoutByClass('mainBottomRow', 'Compact');
                 setLayoutByClass('mainLowerAlphas', 'Compact');
+                setVisibleByID('keyRightWin', false);
                 //regular number row
                 setLayoutByClass('mainArea', '100');
                 break;
@@ -115,6 +116,7 @@ $(document).ready(function() {
                 //arrow keys are partially integrated     /* shortened right shift key, and tighter bottom row, to allow arrow keys to nestle in  */
                 setLayoutByClass('mainBottomRow', '68');
                 setLayoutByClass('mainLowerAlphas', '68');
+                setVisibleByID('keyRightWin', false);
                 //regular number row
                 setLayoutByClass('mainArea', '100');
                 break;
@@ -122,6 +124,7 @@ $(document).ready(function() {
                 //no room for arrow keys
                 setLayoutByClass('mainBottomRow', '100');
                 setLayoutByClass('mainLowerAlphas', '100');
+                setVisibleByID('keyRightWin', true);
                 //regular number row
                 setLayoutByClass('mainArea', '100');
                 break;
@@ -129,6 +132,7 @@ $(document).ready(function() {
                 //no room for arrow keys
                 setLayoutByClass('mainBottomRow', '100');
                 setLayoutByClass('mainLowerAlphas', '100');
+                setVisibleByID('keyRightWin', true);
                 //no number row
                 setLayoutByClass('mainArea', '40');
                 break;
@@ -141,6 +145,14 @@ $(document).ready(function() {
     {
         $('.' + className).addClass(className + layout);
     }
+    function setLayoutByID(className, layout)
+    {
+        $('#' + className).addClass(className + layout);
+    }
+    function removeLayoutByID(idName, layout)
+    {
+        $('#' + idName).removeClass(idName + layout);
+    }
     function removeLayout(layout)
     {
         $('.keyboard').removeClass('keyboard' + layout);
@@ -148,7 +160,15 @@ $(document).ready(function() {
         $('.mainBottomRow').removeClass('mainBottomRow' + layout);
         $('.mainLowerAlphas').removeClass('mainLowerAlphas' + layout);
         setVisibleByID('moreInfo' + layout, false);
-        
+        setVisibleByID('keyRightWin', false);
+        setVisibleByID('keyInsert', false);
+        setVisibleByID('keyEnd', false);
+        removeLayoutByID('keyInsert', layout);
+        removeLayoutByID('keyHome', layout);
+        removeLayoutByID('keyDelete', layout);
+        removeLayoutByID('keyEnd', layout);
+        removeLayoutByID('keyPageUp', layout);
+        removeLayoutByID('keyPageDown', layout);
     }
     function removeAllLayouts()
     {
@@ -203,6 +223,25 @@ $(document).ready(function() {
             $('.area').find('.keyModifier').removeClass('keyModifierMainStyle');
             $('.keyboard').removeClass('keyboardDark');
             $('.keyboard').addClass('keyboardLight');
+        }
+    }
+    function setUpperNavArea(layout)
+    {
+        setLayoutByID('keyInsert', layout);
+        setLayoutByID('keyHome', layout);
+        setLayoutByID('keyDelete', layout);
+        setLayoutByID('keyEnd', layout);
+        setLayoutByID('keyPageUp', layout);
+        setLayoutByID('keyPageDown', layout);
+        if(layout == "Compact")
+        {
+            setVisibleByID('keyInsert', false);
+            setVisibleByID('keyEnd', false);
+        }
+        else
+        {
+            setVisibleByID('keyInsert', true);
+            setVisibleByID('keyEnd', true);
         }
     }
 });

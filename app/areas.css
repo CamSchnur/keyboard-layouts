@@ -71,12 +71,6 @@
     grid-column-end:2;
 }
 
-.mainAreaCompactNav
-{
-    /* shortened right shift key, and tighter bottom row, to allow arrow keys to nestle in  */
-
-
-}
 .mainArea40
 {
     /* no number keys */
@@ -97,22 +91,10 @@
 .upperNavArea
 {
    grid-template-columns: var(--size1u) var(--size1u) var(--size1u);
-   grid-template-rows: var(--size1u) var(--size1u);
+   grid-template-rows: var(--size1u) var(--size1u) calc(var(--size1u) - (1 * var(--sizeSectionSpace)));
      /* background-color: dimgray;*/
 
     grid-row-start: 2;
-    grid-row-end: 3;
-
-    grid-column-start:2;
-    grid-column-end:3;
-}
-.midNavArea
-{
-    grid-template-columns: var(--size1u) var(--size1u) var(--size1u);
-    grid-template-rows: calc(var(--size1u) - (2 * var(--sizeSectionSpace)));
-     /* background-color:pink;*/
-
-    grid-row-start: 3;
     grid-row-end: 4;
 
     grid-column-start:2;
