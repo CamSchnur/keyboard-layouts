@@ -59,6 +59,13 @@ body {
     column-gap: var(--sizeSectionSpace);
     row-gap: var(--sizeSectionSpace);
 }
+.keyboard65
+{
+    grid-template-columns: calc(var(--widthMainArea) - (2 * var(--size1u))) var(--widthNavArea) 0px;
+    grid-template-rows: 0px auto auto auto; 
+    column-gap: 0px;
+    row-gap: 0px;
+}
 .keyboard60
 {
     grid-template-columns: var(--widthMainArea) 0px 0px;

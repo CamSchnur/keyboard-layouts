@@ -79,6 +79,9 @@ $(document).ready(function() {
             case '68':
             case '65':
                 //these models have a weird nav area:
+                setVisibleByClass('upperNavArea', true);
+                setVisibleByClass('midNavArea', false);
+                setVisibleByClass('lowerNavArea', true);
                 break;
             default:
                 //these models do not have a nav area:
@@ -93,30 +96,57 @@ $(document).ready(function() {
         switch(layout)
         {
             case 'TKL':
-            case '100':
-                //these models have a regular main area 
-                $('.mainArea').addClass('mainArea100');
-                break;          
+            case '100':    
+                //no room for arrow keys (they are over in standard nav area)
+                setLayoutByClass('mainBottomRow', '100');
+                setLayoutByClass('mainLowerAlphas', '100');
+                //regular number row
+                setLayoutByClass('mainArea', '100');
+                break;
             case '75':
-                //function area is compacted
-                $('.mainArea').addClass('mainArea75');
+            case '65':
+                //arrow keys are integrated    /* shortened right shift key, and tighter bottom row, to allow arrow keys to nestle in  */
+                setLayoutByClass('mainBottomRow', 'Compact');
+                setLayoutByClass('mainLowerAlphas', 'Compact');
+                //regular number row
+                setLayoutByClass('mainArea', '100');
                 break;
             case '68':
-            case '65':
+                //arrow keys are partially integrated     /* shortened right shift key, and tighter bottom row, to allow arrow keys to nestle in  */
+                setLayoutByClass('mainBottomRow', '68');
+                setLayoutByClass('mainLowerAlphas', '68');
+                //regular number row
+                setLayoutByClass('mainArea', '100');
+                break;
             case '60':
-                //function area is gone
-                $('.mainArea').addClass('mainAreaCompact');
+                //no room for arrow keys
+                setLayoutByClass('mainBottomRow', '100');
+                setLayoutByClass('mainLowerAlphas', '100');
+                //regular number row
+                setLayoutByClass('mainArea', '100');
+                break;
+            case '40':
+                //no room for arrow keys
+                setLayoutByClass('mainBottomRow', '100');
+                setLayoutByClass('mainLowerAlphas', '100');
+                //no number row
+                setLayoutByClass('mainArea', '40');
                 break;
             default:
-                $('.mainArea').addClass('mainArea40');
                 break;     
         }
         setVisibleByID('moreInfo' + layout, true);
+    }
+    function setLayoutByClass(className, layout)
+    {
+        $('.' + className).addClass(className + layout);
     }
     function removeLayout(layout)
     {
         $('.keyboard').removeClass('keyboard' + layout);
         $('.mainArea').removeClass('mainArea' + layout);
+        $('.mainBottomRow').removeClass('mainBottomRow' + layout);
+        $('.mainLowerAlphas').removeClass('mainLowerAlphas' + layout);
         setVisibleByID('moreInfo' + layout, false);
         
     }

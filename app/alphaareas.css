@@ -38,20 +38,24 @@
 }
 
 .mainLowerAlphas
-{
-    grid-template-columns: var(--size225u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size275u);
+{    
     grid-template-rows: var(--size1u);
-    
     grid-row-start: 4;
     grid-row-end: 5;
 
     grid-column-start:1;
     grid-column-end:2;
 }
-
+.mainLowerAlphas100
+{
+    grid-template-columns: var(--size225u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size275u);  
+}
+.mainLowerAlphasCompact
+{
+    grid-template-columns: var(--size225u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size175u);   
+}
 .mainBottomRow
 {
-    grid-template-columns: var(--size15u) var(--size1u) var(--size125u) var(--size65u) var(--size125u) var(--size1u) var(--size1u) var(--size15u);
     grid-template-rows: var(--size1u);
 
     grid-row-start: 5;
@@ -61,4 +65,15 @@
     grid-column-end:2;
 
 }
-
+.mainBottomRow100
+{
+    grid-template-columns: var(--size15u) var(--size1u) var(--size125u) var(--size65u) var(--size125u) var(--size1u) var(--size1u) var(--size15u);
+}
+.mainBottomRowCompact
+{
+    grid-template-columns: var(--size15u) var(--size1u) var(--size125u) var(--size65u) var(--size1u) var(--size1u) var(--size1u);
+}
+.mainBottomRow68
+{
+    grid-template-columns: var(--size15u) var(--size1u) var(--size125u) var(--size65u) var(--size1u) var(--size1u) var(--size1u);
+}
