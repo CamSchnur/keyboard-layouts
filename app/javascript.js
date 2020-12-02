@@ -87,7 +87,7 @@ $(document).ready(function() {
                 //these models do not have a nav area:
                 setVisibleByClass('upperNavArea', false);
                 setVisibleByClass('lowerNavArea', false);
-                setUpperNavArea('100');
+                setUpperNavArea('Compact');
                 break;     
         }
 

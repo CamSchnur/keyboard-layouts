@@ -150,34 +150,97 @@
     grid-row-end: 5;
     grid-column-start:3;
     grid-column-end:4;
+
+    transition: grid-row-start 1s, grid-row-end 1s, grid-column-start 1s, grid-column-end 1s;
+}
+
+.keyPageDown
+{
+    position: absolute;
+    width: var(--size1u);
+    height: var(--size1u);
+    margin-top: calc(1* var(--size1u) + var(--sizeKeySpace) * 2);
+    margin-left:calc(2* var(--size1u) + var(--sizeKeySpace) * 4);
+}
+.keyPageDown100
+{
+    margin-top: calc(1* var(--size1u) + var(--sizeKeySpace) * 2);
+    transition: margin 1s;
+}
+.keyPageDownCompact
+{
+    margin-top: calc(2* var(--size1u) + var(--sizeKeySpace) * 4);
+    transition: margin 1s;
+}
+.keyPageUp
+{
+    position: absolute;
+    width: var(--size1u);
+    height: var(--size1u);
+    margin-top: 0;
+    margin-left:calc(2* var(--size1u) + var(--sizeKeySpace) * 4);
+}
+.keyPageUp100
+{
+    margin-top: 0;
+    transition: margin 1s;
 }
 .keyPageUpCompact
 {
-    grid-row-start: 2;
-    grid-row-end: 3;
-
-    grid-column-start:3;
-    grid-column-end:4;
+    margin-top: calc(1* var(--size1u) + var(--sizeKeySpace) * 2);
+    transition: margin 1s;
 }
-.KeyPageDownCompact
+.keyHome
 {
-
-    grid-row-start: 3;
-    grid-row-end: 4;
-    grid-column-start:3;
-    grid-column-end:4;
+    position: absolute;
+    width: var(--size1u);
+    height: var(--size1u);
+    margin-top: 0;
+    margin-left:calc(1* var(--size1u) + var(--sizeKeySpace) * 2);
+}
+.keyHome100
+{
+    margin-top: 0;
+    margin-left:calc(1* var(--size1u) + var(--sizeKeySpace) * 2);
+    transition: margin 1s;
 }
 .keyHomeCompact
 {
-    grid-row-start: 1;
-    grid-row-end: 2;
-
-    grid-column-start:3;
-    grid-column-end:4;
+    margin-left:calc(2* var(--size1u) + var(--sizeKeySpace) * 4);
+    margin-top: 0;
+    transition: margin 1s;
+}
+.keyEnd
+{
+    position: absolute;
+    width: var(--size1u);
+    height: var(--size1u);
+    margin-top:calc(1* var(--size1u) + var(--sizeKeySpace) * 2);
+    margin-left:calc(1* var(--size1u) + var(--sizeKeySpace) * 2);
+}
+.keyEnd100
+{
+    transition: margin 1s, opacity 1s ease-in, display 1s ease-in, visibility 1s ease-in; 
 }
 .keyEndCompact
 {
-
+    transition: margin 1s, opacity 0.5s, display 0.5s, visibility 0.5s;
+}
+.keyInsert
+{
+    position: absolute;
+    width: var(--size1u);
+    height: var(--size1u);
+    margin-top:calc(1* var(--size1u) + var(--sizeKeySpace) * 2);
+    margin-left:0;
+}
+.keyInsert100
+{
+    transition: margin 1s, opacity 1s ease-in, display 1s ease-in, visibility 1s ease-in; 
+}
+.keyInsertCompact
+{
+    transition: margin 1s, opacity 0.5s, display 0.5s, visibility 0.5s;
 }
 .keyRightFnCompact
 {

@@ -68,6 +68,7 @@ body {
     grid-template-rows: 0px var(--navAreaHeightOffset65Layout) auto auto; 
     column-gap: 0px;
     row-gap: 0px;
+    transition: grid-template-columns 1s, grid-template-rows 1s, column-gap 1s, row-gap 1s;
 }
 .keyboard68
 {
