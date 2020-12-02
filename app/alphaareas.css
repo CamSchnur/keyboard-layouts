@@ -56,7 +56,6 @@
 }
 .mainBottomRow
 {
-    grid-template-rows: var(--size1u);
 
     grid-row-start: 5;
     grid-row-end: 6;
@@ -68,12 +67,15 @@
 .mainBottomRow100
 {
     grid-template-columns: var(--size15u) var(--size1u) var(--size125u) var(--size65u) var(--size125u) var(--size1u) var(--size1u) var(--size15u);
+    grid-template-rows: var(--size1u);
 }
 .mainBottomRowCompact
 {
     grid-template-columns: var(--size15u) var(--size1u) var(--size125u) var(--size65u) var(--size1u) var(--size1u) var(--size1u);
+    grid-template-rows: var(--size1u) 0px;
 }
 .mainBottomRow68
 {
     grid-template-columns: var(--size15u) var(--size1u) var(--size125u) var(--size65u) var(--size1u) var(--size1u) var(--size1u);
+    grid-template-rows: var(--size1u) 0px;
 }

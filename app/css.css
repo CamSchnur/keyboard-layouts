@@ -26,7 +26,8 @@
 --widthNavArea: calc(  (3 * var(--size1u)) + (6 * var(--sizeKeySpace)));
 --widthTenKeyArea:calc(  (4 * var(--size1u)) + (8 * var(--sizeKeySpace)));
 
---navAreaOffset60Layout: calc( (2 * var(--size1u)) + (4 * var(--sizeKeySpace)));
+--navAreaWidthOffset60Layout: calc( (2 * var(--size1u)) + (4 * var(--sizeKeySpace)));
+--navAreaHeightOffset65Layout: calc( (3 * var(--size1u)) + (6 * var(--sizeKeySpace)));
 }
 body {
     background-color: #1e1e1e;
@@ -63,14 +64,14 @@ body {
 }
 .keyboard65
 {
-    grid-template-columns: calc(var(--widthMainArea) - var(--navAreaOffset60Layout)) var(--widthNavArea) 0px;
-    grid-template-rows: 0px auto auto auto; 
+    grid-template-columns: calc(var(--widthMainArea) - var(--navAreaWidthOffset60Layout)) var(--widthNavArea) 0px;
+    grid-template-rows: 0px var(--navAreaHeightOffset65Layout) auto auto; 
     column-gap: 0px;
     row-gap: 0px;
 }
 .keyboard68
 {
-    grid-template-columns: calc(var(--widthMainArea) - var(--navAreaOffset60Layout)) var(--widthNavArea) 0px;
+    grid-template-columns: calc(var(--widthMainArea) - var(--navAreaWidthOffset60Layout)) var(--widthNavArea) 0px;
     grid-template-rows: 0px auto auto auto; 
     column-gap: 0px;
     row-gap: 0px;
