@@ -100,6 +100,9 @@ $(document).ready(function() {
                 setLayoutByClass('mainBottomRow', '100');
                 setLayoutByClass('mainLowerAlphas', '100');
                 setVisibleByID('keyRightWin', true);
+                setLayoutById('keyRightWin', '100');
+                setLayoutById('keyRightFn', '100');
+                setLayoutById('keyRightCtrl', '100');
                 //regular number row
                 setLayoutByClass('mainArea', '100');
                 break;
@@ -108,6 +111,9 @@ $(document).ready(function() {
                 //arrow keys are integrated    /* shortened right shift key, and tighter bottom row, to allow arrow keys to nestle in  */
                 setLayoutByClass('mainBottomRow', 'Compact');
                 setLayoutByClass('mainLowerAlphas', 'Compact');
+                setLayoutById('keyRightWin', 'Compact');
+                setLayoutById('keyRightFn', 'Compact');
+                setLayoutById('keyRightCtrl', 'Compact');
                 setVisibleByID('keyRightWin', false);
                 //regular number row
                 setLayoutByClass('mainArea', '100');
@@ -117,6 +123,9 @@ $(document).ready(function() {
                 setLayoutByClass('mainBottomRow', '68');
                 setLayoutByClass('mainLowerAlphas', '68');
                 setVisibleByID('keyRightWin', false);
+                setLayoutById('keyRightWin', 'Compact');
+                setLayoutById('keyRightFn', 'Compact');
+                setLayoutById('keyRightCtrl', 'Compact');
                 //regular number row
                 setLayoutByClass('mainArea', '100');
                 break;
@@ -125,6 +134,9 @@ $(document).ready(function() {
                 setLayoutByClass('mainBottomRow', '100');
                 setLayoutByClass('mainLowerAlphas', '100');
                 setVisibleByID('keyRightWin', true);
+                setLayoutById('keyRightWin', '100');
+                setLayoutById('keyRightFn', '100');
+                setLayoutById('keyRightCtrl', '100');
                 //regular number row
                 setLayoutByClass('mainArea', '100');
                 break;
@@ -133,6 +145,9 @@ $(document).ready(function() {
                 setLayoutByClass('mainBottomRow', '100');
                 setLayoutByClass('mainLowerAlphas', '100');
                 setVisibleByID('keyRightWin', true);
+                setLayoutById('keyRightWin', '100');
+                setLayoutById('keyRightFn', '100');
+                setLayoutById('keyRightCtrl', '100');
                 //no number row
                 setLayoutByClass('mainArea', '40');
                 break;
@@ -145,13 +160,17 @@ $(document).ready(function() {
     {
         $('.' + className).addClass(className + layout);
     }
-    function setLayoutByID(className, layout)
+    function setLayoutById(className, layout)
     {
         $('#' + className).addClass(className + layout);
     }
-    function removeLayoutByID(idName, layout)
+    function removeLayoutById(idName, layout)
     {
         $('#' + idName).removeClass(idName + layout);
+    }
+    function removeLayoutByClass(idName, layout)
+    {
+        $('.' + idName).removeClass(idName + layout);
     }
     function removeLayout(layout)
     {
@@ -163,12 +182,15 @@ $(document).ready(function() {
         setVisibleByID('keyRightWin', false);
         setVisibleByID('keyInsert', false);
         setVisibleByID('keyEnd', false);
-        removeLayoutByID('keyInsert', layout);
-        removeLayoutByID('keyHome', layout);
-        removeLayoutByID('keyDelete', layout);
-        removeLayoutByID('keyEnd', layout);
-        removeLayoutByID('keyPageUp', layout);
-        removeLayoutByID('keyPageDown', layout);
+        removeLayoutById('keyInsert', layout);
+        removeLayoutById('keyHome', layout);
+        removeLayoutById('keyDelete', layout);
+        removeLayoutById('keyEnd', layout);
+        removeLayoutById('keyPageUp', layout);
+        removeLayoutById('keyPageDown', layout);
+        removeLayoutByClass('keyRightWin', layout);
+        removeLayoutByClass('keyRightFn', layout);
+        removeLayoutByClass('keyRightCtrl', layout);
     }
     function removeAllLayouts()
     {
@@ -227,12 +249,12 @@ $(document).ready(function() {
     }
     function setUpperNavArea(layout)
     {
-        setLayoutByID('keyInsert', layout);
-        setLayoutByID('keyHome', layout);
-        setLayoutByID('keyDelete', layout);
-        setLayoutByID('keyEnd', layout);
-        setLayoutByID('keyPageUp', layout);
-        setLayoutByID('keyPageDown', layout);
+        setLayoutById('keyInsert', layout);
+        setLayoutById('keyHome', layout);
+        setLayoutById('keyDelete', layout);
+        setLayoutById('keyEnd', layout);
+        setLayoutById('keyPageUp', layout);
+        setLayoutById('keyPageDown', layout);
         if(layout == "Compact")
         {
             setVisibleByID('keyInsert', false);
