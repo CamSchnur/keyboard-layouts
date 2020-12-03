@@ -8,17 +8,17 @@
     position: absolute;
     width: var(--size1u);
     height: var(--size1u);
-    margin-top: calc(1* var(--size1u) + var(--sizeKeySpace) * 2);
-    margin-left:calc(2* var(--size1u) + var(--sizeKeySpace) * 4);
+    margin-top:  calc(1 * var(--size1uWithSpacing));
+    margin-left: calc(2 * var(--size1uWithSpacing));
 }
 .keyPageDown100
 {
-    margin-top: calc(1* var(--size1u) + var(--sizeKeySpace) * 2);
+    margin-top: calc(1 * var(--size1uWithSpacing));
     transition: margin 1s;
 }
 .keyPageDownCompact
 {
-    margin-top: calc(2* var(--size1u) + var(--sizeKeySpace) * 4);
+    margin-top: calc(2 * var(--size1uWithSpacing));
     transition: margin 1s;
 }
 
@@ -30,7 +30,7 @@
     width: var(--size1u);
     height: var(--size1u);
     margin-top: 0;
-    margin-left:calc(2* var(--size1u) + var(--sizeKeySpace) * 4);
+    margin-left: calc(2 * var(--size1uWithSpacing));
 }
 .keyPageUp100
 {
@@ -39,7 +39,7 @@
 }
 .keyPageUpCompact
 {
-    margin-top: calc(1* var(--size1u) + var(--sizeKeySpace) * 2);
+    margin-top: calc(1 * var(--size1uWithSpacing));;
     transition: margin 1s;
 }
 
@@ -51,17 +51,17 @@
     width: var(--size1u);
     height: var(--size1u);
     margin-top: 0;
-    margin-left:calc(1* var(--size1u) + var(--sizeKeySpace) * 2);
+    margin-left: calc(1 * var(--size1uWithSpacing));
 }
 .keyHome100
 {
     margin-top: 0;
-    margin-left:calc(1* var(--size1u) + var(--sizeKeySpace) * 2);
+    margin-left: calc(1 * var(--size1uWithSpacing));
     transition: margin 1s;
 }
 .keyHomeCompact
 {
-    margin-left:calc(2* var(--size1u) + var(--sizeKeySpace) * 4);
+    margin-left: calc(2 * var(--size1uWithSpacing));
     margin-top: 0;
     transition: margin 1s;
 }
@@ -83,8 +83,8 @@
 }
 .keyDeleteCompact
 {
-    margin-top: calc(3* var(--size1u) + var(--sizeKeySpace) * 6);
-    margin-left: calc(2* var(--size1u) + var(--sizeKeySpace) * 4);
+    margin-top: calc(3 * var(--size1uWithSpacing));
+    margin-left: calc(2 * var(--size1uWithSpacing));
     transition: margin 1s;
 }
 
@@ -96,8 +96,8 @@
     position: absolute;
     width: var(--size1u);
     height: var(--size1u);
-    margin-top:calc(1* var(--size1u) + var(--sizeKeySpace) * 2);
-    margin-left:calc(1* var(--size1u) + var(--sizeKeySpace) * 2);
+    margin-top: calc(1 * var(--size1uWithSpacing));
+    margin-left: calc(1 * var(--size1uWithSpacing));
 }
 .keyEnd100
 {
@@ -116,7 +116,7 @@
     position: absolute;
     width: var(--size1u);
     height: var(--size1u);
-    margin-top:calc(1* var(--size1u) + var(--sizeKeySpace) * 2);
+    margin-top: calc(1 * var(--size1uWithSpacing));
     margin-left:0;
 }
 .keyInsert100
