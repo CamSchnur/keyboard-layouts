@@ -1,8 +1,7 @@
 
 .key {
     border-radius: var(--borderRounding);
-    border: solid var(--sizeVisualKeyBorder) lightcyan;
-
+    
     box-sizing:border-box;
 
     /*margin:var(--sizeKeySpace);*/
@@ -16,6 +15,8 @@
     font-family: 'Open Sans', sans-serif;
 
     transition: border 0.25s, line-height 0.25s, font-size 0.25s;
+    box-shadow: 0 0 0 var(--sizeVisualKeyBorder) lightcyan inset;
+
     /* thicker border option:
         
    

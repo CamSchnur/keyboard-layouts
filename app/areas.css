@@ -76,7 +76,6 @@
     /* no number keys */
     grid-template-rows:  0px var(--size1u) var(--size1u) var(--size1u) var(--size1u);
 
-
     grid-row-start: 2;
     grid-row-end: 6;
 
@@ -91,34 +90,31 @@
 .upperNavArea
 {
    grid-template-columns: var(--size1u) var(--size1u) var(--size1u);
-   grid-template-rows: var(--size1u) var(--size1u) calc(var(--size1u) - (1 * var(--sizeSectionSpace)));
-     /* background-color: dimgray;*/
+   grid-template-rows: var(--size1u) var(--size1u) calc(var(--size1u) - var(--sizeSectionSpace) - ( 2* var(--sizeKeySpace)));
 
     grid-row-start: 2;
     grid-row-end: 3;
 
     grid-column-start:2;
     grid-column-end:3;
+    
+    padding: calc( 2 * var(--sizeKeySpace));
 }
 .lowerNavArea
 {
     grid-template-columns: var(--size1u) var(--size1u) var(--size1u);
     grid-template-rows: var(--size1u) var(--size1u);
 
-   /* background-color: darkgoldenrod;*/
     grid-row-start: 3;
     grid-row-end: 4;
 
     grid-column-start:2;
     grid-column-end:3;
+    padding: calc( 2 * var(--sizeKeySpace));
 }
 .tenKeyArea
 {
-
-     /* background-color: darkslategray;*/
-
     grid-template-columns: var(--size1u) var(--size1u) var(--size1u) var(--size1u);
-    
     grid-template-rows: var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u);
 
     grid-row-start: 2;

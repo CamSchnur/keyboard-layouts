@@ -1,7 +1,9 @@
 
 .mainNumberRow
 {
-    grid-template-columns: var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) ;
+    grid-template-columns: var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) 
+                            var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) 
+                            var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) ;
     grid-template-rows: var(--size1u);
 
     grid-row-start: 1;
@@ -13,7 +15,9 @@
 }
 .mainUpperAlphas
 {
-    grid-template-columns: var(--size15u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size15u);
+    grid-template-columns: var(--size15u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) 
+                           var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) 
+                           var(--size1u) var(--size1u) var(--size1u) var(--size15u);
     grid-template-rows: var(--size1u);
       
     grid-row-start: 2;
@@ -45,14 +49,20 @@
 
     grid-column-start:1;
     grid-column-end:2;
+
+    transition: grid-template-columns 1s;
 }
 .mainLowerAlphas100
 {
-    grid-template-columns: var(--size225u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size275u);  
+    grid-template-columns: var(--size225u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) 
+                           var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) 
+                           var(--size1u) var(--size275u);  
 }
 .mainLowerAlphasCompact
 {
-    grid-template-columns: var(--size225u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size175u);   
+    grid-template-columns: var(--size225u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) 
+                            var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) 
+                            var(--size1u) var(--size175u);   
 }
 .mainBottomRow
 {
@@ -62,6 +72,8 @@
 
     grid-column-start:1;
     grid-column-end:2;
+    
+    transition: grid-template-columns 1s;
 
 }
 .mainBottomRow100
@@ -71,11 +83,11 @@
 }
 .mainBottomRowCompact
 {
-    grid-template-columns: var(--size15u) var(--size1u) var(--size125u) var(--size65u) var(--size1u) var(--size1u) var(--size1u);
-    grid-template-rows: var(--size1u) 0px;
+    grid-template-columns: var(--size15u) var(--size1u) var(--size125u) var(--size65u) var(--size1u) var(--size1u) var(--size1u) 0px;
+    grid-template-rows: var(--size1u);
 }
 .mainBottomRow68
 {
-    grid-template-columns: var(--size15u) var(--size1u) var(--size125u) var(--size65u) var(--size1u) var(--size1u) var(--size1u);
-    grid-template-rows: var(--size1u) 0px;
+    grid-template-columns: var(--size15u) var(--size1u) var(--size125u) var(--size65u) var(--size1u) var(--size1u) var(--size1u) 0px;
+    grid-template-rows: var(--size1u);
 }
