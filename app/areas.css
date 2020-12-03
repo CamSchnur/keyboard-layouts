@@ -6,10 +6,6 @@
 
     display: grid;
 
-    column-gap: calc( 2 * var(--sizeKeySpace) );
-    row-gap: calc( 2 * var(--sizeKeySpace));
-    padding: var(--sizeKeySpace);
-    
     /*transition: grid-template-columns 1.0s, grid-template-rows 1.0, column-gap 1.0s, row-gap 1.0s, opacity 1.0s, display 1.0s, visibility 1.0s;*/
 }
 .functionKeyArea
@@ -23,7 +19,6 @@
 
     grid-template-rows: var(--size1u);
 
-    /*background-color: darkblue;*/
     grid-row-start: 1;
     grid-row-end: 2;
 
@@ -35,7 +30,7 @@
 {
     grid-template-columns: var(--size1u) var(--size1u) var(--size1u);
     grid-template-rows: var(--size1u);
-     /* background-color: darkred;*/
+
     grid-row-start: 1;
     grid-row-end: 2;
 
@@ -46,7 +41,7 @@
 .mediaArea
 {
     grid-template-columns: var(--size1u) var(--size1u) var(--size1u) var(--size1u);
-     /* background-color: darkolivegreen;*/
+
     grid-row-start: 1;
     grid-row-end: 2;
 
@@ -90,7 +85,7 @@
 .upperNavArea
 {
    grid-template-columns: var(--size1u) var(--size1u) var(--size1u);
-   grid-template-rows: var(--size1u) var(--size1u) calc(var(--size1u) - var(--sizeSectionSpace) - ( 2* var(--sizeKeySpace)));
+   grid-template-rows: var(--size1u) var(--size1u) calc(var(--size1u) - var(--sizeSectionSpace));
 
     grid-row-start: 2;
     grid-row-end: 3;
@@ -98,7 +93,6 @@
     grid-column-start:2;
     grid-column-end:3;
     
-    padding: calc( 2 * var(--sizeKeySpace));
 }
 .lowerNavArea
 {
@@ -110,7 +104,6 @@
 
     grid-column-start:2;
     grid-column-end:3;
-    padding: calc( 2 * var(--sizeKeySpace));
 }
 .tenKeyArea
 {

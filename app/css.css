@@ -11,25 +11,23 @@
 --size65u: 351px;
 
 --borderRounding: 5px;
---sizeKeySpace: 1.5px; /* spacing between the keys */ /*2*/
-
---size1uWithSpacing: 57px; /* calc( (var(--size1u)) + (2 * var(--sizeKeySpace));  common calculation: size of a 1u key plus sizeKeySpace on either side */ 
+--sizeKeySpace: 1.5px; /* spacing between the keys.  this refers to the internal margin of the key ONLY and isn't needed for other spacing */ 
 
 --sizeVisualKeyBorder: 2px;
 --sizeVisualKeyBorderSides: 9px; 
 
---sizeSectionSpace: 8px; /* standard spacing between sections on the board --TODO*/
+--sizeSectionSpace: 8px; /* standard spacing between sections on the board*/
 
 
---functionSectionSpacing: 24px; /* 2x func spacing + 1x Esc Spacing should add up to --size1u (actually slightly less based on margins) */
+--functionSectionSpacing: 24px; /* 2x func spacing + 1x Esc Spacing should add up to --size1u  */
 --funtionEscSpacing: 60px;
 
---widthMainArea: calc(15 * var(--size1uWithSpacing));
---widthNavArea: calc(3 * var(--size1uWithSpacing));
---widthTenKeyArea: calc(4 * var(--size1uWithSpacing));
+--widthMainArea: calc(15 * var(--size1u));
+--widthNavArea: calc(3 * var(--size1u));
+--widthTenKeyArea: calc(4 * var(--size1u));
 
---navAreaWidthOffset60Layout:  calc(2 * var(--size1uWithSpacing));
---navAreaHeightOffset65Layout:  calc(3 * var(--size1uWithSpacing));;
+--navAreaWidthOffset60Layout:  calc(2 * var(--size1u));
+--navAreaHeightOffset65Layout:  calc(3 * var(--size1u));;
 }
 body {
     background-color: #1e1e1e;
