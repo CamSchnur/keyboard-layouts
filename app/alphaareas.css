@@ -83,50 +83,11 @@
 }
 .mainBottomRowCompact
 {
-    grid-template-columns: var(--size15u) var(--size1u) var(--size125u) var(--size65u) var(--size1u) var(--size1u) var(--size1u) 0px;
+    grid-template-columns: var(--size15u) var(--size1u) var(--size125u) var(--size65u) var(--size1u)  0px var(--size1u) var(--size1u);
     grid-template-rows: var(--size1u);
 }
 .mainBottomRow68
 {
-    grid-template-columns: var(--size15u) var(--size1u) var(--size125u) var(--size65u) var(--size1u) var(--size1u) var(--size1u) 0px;
+    grid-template-columns: var(--size125u) var(--size125u) var(--size125u) var(--size65u) var(--size125u) 0px var(--size125u) var(--size125u);
     grid-template-rows: var(--size1u);
 }
-
-.keyBottomRowManualLayout
-{
-    position: absolute;
-    height: calc(var(--size1u) - 2 * var(--sizeKeySpace));
-    top: 0;
-}
-
-.keyRAlt
-{
-    width: calc(var(--size125u) - 2 * var(--sizeKeySpace));
-    left: 0;
-}
-.keyRAlt100{}
-.keyRAltCompact{}
-
-.keyRWin
-{
-    width: calc(var(--size1u) - 2 * var(--sizeKeySpace));
-    left: var(--size125u);
-}
-.keyRWinCompact{}
-.keyRWin100{}
-
-.keyRFn
-{
-    width: calc(var(--size1u) - 2 * var(--sizeKeySpace));
-    left: calc(var(--size125u) + var(--size1u));
-}
-.keyRFn100{}
-.keyRFnCompact{}
-
-.keyRCtrl
-{
-    width: calc(var(--size15u) - 2 * var(--sizeKeySpace));
-    left: calc(var(--size125u) + var(--size1u) + var(--size1u));
-}
-.keyRCtrl100{}
-.keyRCtrlCompact{}

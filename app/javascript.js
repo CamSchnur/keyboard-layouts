@@ -17,13 +17,17 @@ $(document).ready(function() {
         
         addLayout('TKL');
     })
-    $("#layout60").click(function() {
+    $("#layout68").click(function() {
         
-        addLayout('60');
+        addLayout('68');
     })
     $("#layout65").click(function() {
         
         addLayout('65');
+    })
+    $("#layout60").click(function() {
+        
+        addLayout('60');
     })
     function addLayout(layout)
     {
@@ -100,9 +104,6 @@ $(document).ready(function() {
                 setLayoutByClass('mainBottomRow', '100');
                 setLayoutByClass('mainLowerAlphas', '100');
                 setVisibleByID('keyRightWin', true);
-                setLayoutById('keyRightWin', '100');
-                setLayoutById('keyRightFn', '100');
-                setLayoutById('keyRightCtrl', '100');
                 //regular number row
                 setLayoutByClass('mainArea', '100');
                 break;
@@ -111,9 +112,6 @@ $(document).ready(function() {
                 //arrow keys are integrated    /* shortened right shift key, and tighter bottom row, to allow arrow keys to nestle in  */
                 setLayoutByClass('mainBottomRow', 'Compact');
                 setLayoutByClass('mainLowerAlphas', 'Compact');
-                setLayoutById('keyRightWin', 'Compact');
-                setLayoutById('keyRightFn', 'Compact');
-                setLayoutById('keyRightCtrl', 'Compact');
                 setVisibleByID('keyRightWin', false);
                 //regular number row
                 setLayoutByClass('mainArea', '100');
@@ -123,9 +121,6 @@ $(document).ready(function() {
                 setLayoutByClass('mainBottomRow', '68');
                 setLayoutByClass('mainLowerAlphas', '68');
                 setVisibleByID('keyRightWin', false);
-                setLayoutById('keyRightWin', 'Compact');
-                setLayoutById('keyRightFn', 'Compact');
-                setLayoutById('keyRightCtrl', 'Compact');
                 //regular number row
                 setLayoutByClass('mainArea', '100');
                 break;
@@ -134,9 +129,6 @@ $(document).ready(function() {
                 setLayoutByClass('mainBottomRow', '100');
                 setLayoutByClass('mainLowerAlphas', '100');
                 setVisibleByID('keyRightWin', true);
-                setLayoutById('keyRightWin', '100');
-                setLayoutById('keyRightFn', '100');
-                setLayoutById('keyRightCtrl', '100');
                 //regular number row
                 setLayoutByClass('mainArea', '100');
                 break;
@@ -145,9 +137,6 @@ $(document).ready(function() {
                 setLayoutByClass('mainBottomRow', '100');
                 setLayoutByClass('mainLowerAlphas', '100');
                 setVisibleByID('keyRightWin', true);
-                setLayoutById('keyRightWin', '100');
-                setLayoutById('keyRightFn', '100');
-                setLayoutById('keyRightCtrl', '100');
                 //no number row
                 setLayoutByClass('mainArea', '40');
                 break;
