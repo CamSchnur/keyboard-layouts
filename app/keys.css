@@ -12,14 +12,10 @@
     vertical-align:middle;
     text-align: center;
     font-size: 10; 
-    line-height: var(--size1u);
+    line-height: calc(var(--size1u) - 2 * var(--sizeKeySpace));
     font-family: 'Open Sans', sans-serif;
 
     transition: border 0.25s, line-height 0.25s, font-size 0.25s;
-    /* thicker border option:
-        
-   
-    */
 }
 .keyAlphaMainStyle
 {
@@ -138,26 +134,4 @@
 
     grid-column-start:2;
     grid-column-end:3;   
-}
-
-
-.keyRightFnCompact
-{
-    grid-row-start: 1;
-    grid-row-end: 2;
-    
-    grid-column-start:7;
-    grid-column-end:8;
-}
-.keyRightCtrlCompact
-{
-    grid-row-start: 1;
-    grid-row-end: 2;
-
-    grid-column-start:6;
-    grid-column-end:7;
-}
-.keyRightWinCompact
-{
-    
 }
