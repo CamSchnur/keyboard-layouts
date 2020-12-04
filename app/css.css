@@ -2,7 +2,9 @@
 /* sizes based on 1u = 18mm  and 4px = 1mm   */
 
 --size1u: 54px; /*72*/ /* the width of one standard key */
+--size116: 63px;
 --size125u: 67.5px;
+--size133u: 72px;
 --size15u: 81px;
 --size175u: 94.5px;
 --size2u: 108px;
