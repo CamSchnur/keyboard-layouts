@@ -17,6 +17,10 @@ $(document).ready(function() {
         
         addLayout('TKL');
     })
+    $("#layout75").click(function() {
+        
+        addLayout('75');
+    })
     $("#layout68").click(function() {
         
         addLayout('68');
@@ -28,6 +32,10 @@ $(document).ready(function() {
     $("#layout60").click(function() {
         
         addLayout('60');
+    })
+    $("#layout40").click(function() {
+        
+        addLayout('40');
     })
     function addLayout(layout)
     {
