@@ -101,14 +101,14 @@ body {
     display:none;
     visibility: hidden;
     grid-template-rows: 0px;
-    transition: opacity 0.5s, display 0.5s, visibility 0.5s;
+    transition: opacity 0.5s, display 0.5s, visibility 0.5s, grid-template-columns 1s;
 }
 .visibleElement
 {
     opacity: 1;
     display:initial;
     visibility:initial;
-    transition: opacity 1s ease-in, display 1s ease-in, visibility 1s ease-in;
+    transition: opacity 1s ease-in, display 1s ease-in, visibility 1s ease-in, grid-template-columns 1s;
 }
 
 .infoPanel

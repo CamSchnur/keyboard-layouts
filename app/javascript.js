@@ -64,20 +64,26 @@ $(document).ready(function() {
                 setLayoutByClass('functionKeyArea', '100');
                 setVisibleByClass('functionKeyArea', true);
                 setVisibleByClass('functionNavArea', true);
+                setVisibleByID('keyScrollLock', true);
+                setLayoutByClass('functionNavArea', '100');
                 setVisibleByClass('mediaArea', true);
                 break;          
             case '75':
                 //this model has a weird function row (it's directly above the number row, instead of above a gap)
                 setLayoutByClass('functionKeyArea', 'Compact');
                 setVisibleByClass('functionKeyArea', true);
-                setVisibleByClass('functionNavArea', false);
+                setVisibleByClass('functionNavArea', true);
+                setVisibleByID('keyScrollLock', false);
+                setLayoutByClass('functionNavArea', 'Compact');
                 setVisibleByClass('mediaArea', true);
                 break;
             default:
                 //these models do not have a function row:
-                setLayoutByClass('functionKeyArea', '100');
+                setLayoutByClass('functionKeyArea', 'Compact');
                 setVisibleByClass('functionKeyArea', false);
                 setVisibleByClass('functionNavArea', false);
+                setVisibleByID('keyScrollLock', false);
+                setLayoutByClass('functionNavArea', '100');
                 setVisibleByClass('mediaArea', false);
                 break;     
         }
@@ -181,14 +187,17 @@ $(document).ready(function() {
     }
     function removeLayout(layout)
     {
-        $('.keyboard').removeClass('keyboard' + layout);
-        $('.mainArea').removeClass('mainArea' + layout);
-        $('.mainBottomRow').removeClass('mainBottomRow' + layout);
-        $('.mainLowerAlphas').removeClass('mainLowerAlphas' + layout);
+        removeLayoutByClass('keyboard', layout);
+        removeLayoutByClass('mainArea', layout);
+        removeLayoutByClass('mainBottomRow', layout);
+        removeLayoutByClass('mainLowerAlphas', layout);
+        removeLayoutByClass('functionKeyArea', layout);
+        removeLayoutByClass('functionNavArea', layout);
         setVisibleByID('moreInfo' + layout, false);
         setVisibleByID('keyRightWin', false);
         setVisibleByID('keyInsert', false);
         setVisibleByID('keyEnd', false);
+        setVisibleByID('keyScrollLock', false);
         removeLayoutById('keyInsert', layout);
         removeLayoutById('keyHome', layout);
         removeLayoutById('keyDelete', layout);

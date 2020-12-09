@@ -27,7 +27,6 @@
     var(--size1u) var(--size1u) var(--size1u) var(--size1u)
     var(--functionSectionSpacing)
     var(--size1u) var(--size1u) var(--size1u) var(--size1u);
-    transition: grid-template-columns 1s;
 }
 
 .functionKeyAreaCompact
@@ -38,12 +37,10 @@
     var(--size1u) var(--size1u) var(--size1u) var(--size1u)
     0px
     var(--size1u) var(--size1u) var(--size1u) var(--size1u);
-    transition: grid-template-columns 1s;
 }
 
 .functionNavArea
 {
-    grid-template-columns: var(--size1u) var(--size1u) var(--size1u);
     grid-template-rows: var(--size1u);
 
     grid-row-start: 1;
@@ -51,8 +48,19 @@
 
     grid-column-start:2;
     grid-column-end:3;
-
 }
+
+.functionNavArea100
+{
+    grid-template-columns: var(--size1u) var(--size1u) var(--size1u);
+}
+
+.functionNavAreaCompact
+{
+    grid-template-columns: var(--size1u) 0px var(--size1u);
+}
+
+
 .mediaArea
 {
     grid-template-columns: var(--size1u) var(--size1u) var(--size1u) var(--size1u);
