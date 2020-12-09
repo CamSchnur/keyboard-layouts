@@ -61,16 +61,21 @@ $(document).ready(function() {
             case 'TKL':
             case '100':
                 //these models have a regular function row 
+                setLayoutByClass('functionKeyArea', '100');
                 setVisibleByClass('functionKeyArea', true);
                 setVisibleByClass('functionNavArea', true);
                 setVisibleByClass('mediaArea', true);
                 break;          
             case '75':
-                //this model has a weird function row
-                //todo
+                //this model has a weird function row (it's directly above the number row, instead of above a gap)
+                setLayoutByClass('functionKeyArea', 'Compact');
+                setVisibleByClass('functionKeyArea', true);
+                setVisibleByClass('functionNavArea', false);
+                setVisibleByClass('mediaArea', true);
                 break;
             default:
                 //these models do not have a function row:
+                setLayoutByClass('functionKeyArea', '100');
                 setVisibleByClass('functionKeyArea', false);
                 setVisibleByClass('functionNavArea', false);
                 setVisibleByClass('mediaArea', false);
@@ -88,6 +93,11 @@ $(document).ready(function() {
                 setUpperNavArea('100');
                 break;          
             case '75':
+                //this model have a weird nav area:
+                setVisibleByClass('upperNavArea', true);
+                setVisibleByClass('lowerNavArea', true);
+                setUpperNavArea('75');
+                break;
             case '68':
             case '65':
                 //these models have a weird nav area:
@@ -246,21 +256,38 @@ $(document).ready(function() {
     }
     function setUpperNavArea(layout)
     {
-        setLayoutById('keyInsert', layout);
-        setLayoutById('keyHome', layout);
-        setLayoutById('keyDelete', layout);
-        setLayoutById('keyEnd', layout);
-        setLayoutById('keyPageUp', layout);
-        setLayoutById('keyPageDown', layout);
-        if(layout == "Compact")
+        if(layout == '75')
         {
-            setVisibleByID('keyInsert', false);
-            setVisibleByID('keyEnd', false);
+            setLayoutById('keyInsert', 'Compact');
+            setLayoutById('keyHome', 'Compact');
+            setLayoutById('keyDelete', '75');
+            setLayoutById('keyEnd', '75');
+            setLayoutById('keyPageUp', 'Compact');
+            setLayoutById('keyPageDown', 'Compact');
         }
         else
         {
-            setVisibleByID('keyInsert', true);
-            setVisibleByID('keyEnd', true);
+            setLayoutById('keyInsert', layout);
+            setLayoutById('keyHome', layout);
+            setLayoutById('keyDelete', layout);
+            setLayoutById('keyEnd', layout);
+            setLayoutById('keyPageUp', layout);
+            setLayoutById('keyPageDown', layout);
+        }
+        switch(layout)
+        {
+            case 'Compact':
+                setVisibleByID('keyInsert', false);
+                setVisibleByID('keyEnd', false);
+                break;
+            case '75':
+                setVisibleByID('keyInsert', false);
+                setVisibleByID('keyEnd', true);
+                break;
+            default:
+                setVisibleByID('keyInsert', true);
+                setVisibleByID('keyEnd', true);
+                break;
         }
     }
 });

@@ -82,6 +82,19 @@
     transition: top 1s, left 1s;
 }
 
+.keyDelete75
+{
+    top: calc(-1 * var(--size1u));
+    left: calc(2 * var(--size1u));
+    transition: top 1s, left 1s;
+}
+.keyEnd75
+{
+    top: calc(3 * var(--size1u));
+    left: calc(2 * var(--size1u));
+    transition: top 1s, left 1s;
+}
+
 
 
 /* End Key - Manual Placement */ 
@@ -100,6 +113,14 @@
     /*todo - should be able to pull these out and let VisibleElement / HiddenElement handle it */
     transition: top 1s, left 1s, opacity 0.5s, display 0.5s, visibility 0.5s;
 }
+.keyEnd75
+{
+    top: calc(3 * var(--size1u));
+    left: calc(2 * var(--size1u));
+    /*todo - should be able to pull these out and let VisibleElement / HiddenElement handle it */
+    transition: top 1s, left 1s, opacity 0.5s, display 0.5s, visibility 0.5s;
+}
+
 
 
 /* Insert Key - Manual Placement */ 
