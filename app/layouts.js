@@ -41,6 +41,7 @@ function removeLayout(layout)
     setVisibleByID('keyRightWin', false);
     setVisibleByID('keyInsert', false);
     setVisibleByID('keyEnd', false);
+    setVisibleByID('keyHome', false);
     setVisibleByID('keyScrollLock', false);
     removeLayoutById('keyInsert', layout);
     removeLayoutById('keyHome', layout);
@@ -82,6 +83,11 @@ function setNavArea(layout)
             setUpperNavArea('75');
             break;
         case '68':
+            //these models have a weird nav area:
+            setVisibleByClass('upperNavArea', true);
+            setVisibleByClass('lowerNavArea', true);
+            setUpperNavArea('68');
+            break;
         case '65':
             //these models have a weird nav area:
             setVisibleByClass('upperNavArea', true);
@@ -99,23 +105,22 @@ function setNavArea(layout)
 
 function setUpperNavArea(layout)
 {
+    setLayoutById('keyDelete', layout);
+    setLayoutById('keyEnd', layout);
+
     if(layout == '75')
     {
         //upper nav area is "Compact" with a few exceptions
         setLayoutById('keyInsert', 'Compact');
         setLayoutById('keyHome', 'Compact');
-        setLayoutById('keyDelete', '75');
-        setLayoutById('keyEnd', '75');
         setLayoutById('keyPageUp', 'Compact');
         setLayoutById('keyPageDown', 'Compact');
     }
     else
     {
-        //likely either "Compact" or "100"
+        //likely either "Compact" or "100" or "68"
         setLayoutById('keyInsert', layout);
         setLayoutById('keyHome', layout);
-        setLayoutById('keyDelete', layout);
-        setLayoutById('keyEnd', layout);
         setLayoutById('keyPageUp', layout);
         setLayoutById('keyPageDown', layout);
     }
@@ -123,14 +128,22 @@ function setUpperNavArea(layout)
     {
         case 'Compact':
             setVisibleByID('keyInsert', false);
+            setVisibleByID('keyHome', true);
             setVisibleByID('keyEnd', false);
             break;
         case '75':
             setVisibleByID('keyInsert', false);
+            setVisibleByID('keyHome', true);
             setVisibleByID('keyEnd', true);
+            break;
+        case '68':
+            setVisibleByID('keyInsert', true);
+            setVisibleByID('keyHome', false);
+            setVisibleByID('keyEnd', false);
             break;
         default:
             setVisibleByID('keyInsert', true);
+            setVisibleByID('keyHome', true);
             setVisibleByID('keyEnd', true);
             break;
     }

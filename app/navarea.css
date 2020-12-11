@@ -24,6 +24,11 @@
     top: calc(2 * var(--size1u));
     transition: top 1s, left 1s;
 }
+.keyPageDown68
+{
+    top: calc(1 * var(--size1u));
+    transition: top 1s, left 1s;
+}
 
 
 /* PageUp Key - Manual Placement */ 
@@ -39,7 +44,12 @@
 }
 .keyPageUpCompact
 {
-    top: calc(1 * var(--size1u));;
+    top: calc(1 * var(--size1u));
+    transition: top 1s, left 1s;
+}
+.keyPageUp68
+{
+    top: 0;
     transition: top 1s, left 1s;
 }
 
@@ -53,14 +63,16 @@
 .keyHome100
 {
     top: 0;
-    left: calc(1 * var(--size1u));
-    transition: top 1s, left 1s;
+    left: calc(1 * var(--size1u));   
+     /*todo - should be able to pull these out and let VisibleElement / HiddenElement handle it */
+    transition: top 1s, left 1s, opacity 1s ease-in, display 1s ease-in, visibility 1s ease-in; 
 }
 .keyHomeCompact
 {
     left: calc(2 * var(--size1u));
-    top: 0;
-    transition: top 1s, left 1s;
+    top: 0;    
+    /*todo - should be able to pull these out and let VisibleElement / HiddenElement handle it */
+    transition: top 1s, left 1s, opacity 1s ease-in, display 1s ease-in, visibility 1s ease-in; 
 }
 
 /* Page Down Key - Manual Placement */ 
@@ -81,16 +93,15 @@
     left: calc(2 * var(--size1u));
     transition: top 1s, left 1s;
 }
-
+.keyDelete68
+{
+    top: calc(1 * var(--size1u));
+    left: calc(1 * var(--size1u));
+    transition: top 1s, left 1s;
+}
 .keyDelete75
 {
     top: calc(-1 * var(--size1u));
-    left: calc(2 * var(--size1u));
-    transition: top 1s, left 1s;
-}
-.keyEnd75
-{
-    top: calc(3 * var(--size1u));
     left: calc(2 * var(--size1u));
     transition: top 1s, left 1s;
 }
@@ -123,6 +134,7 @@
 
 
 
+
 /* Insert Key - Manual Placement */ 
 .keyInsert
 {
@@ -133,6 +145,13 @@
 {
     /*todo - should be able to pull these out and let VisibleElement / HiddenElement handle it */
     transition: top 1s, left 1s, opacity 1s ease-in, display 1s ease-in, visibility 1s ease-in; 
+}
+.keyInsert68
+{
+    top: 0;
+    left: calc(1 * var(--size1u));
+    /*todo - should be able to pull these out and let VisibleElement / HiddenElement handle it */
+    transition: top 1s, left 1s, opacity 0.5s, display 0.5s, visibility 0.5s;
 }
 .keyInsertCompact
 {
