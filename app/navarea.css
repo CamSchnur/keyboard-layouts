@@ -78,32 +78,28 @@
 /* Page Down Key - Manual Placement */ 
 .keyDelete
 {
-    top: 0;
+    top: calc(1 * var(--size1u));
     left:0;
 }
 .keyDelete100
 {
-    top: 0;
+    top: calc(1 * var(--size1u));
     left:0;
-    transition: top 1s, left 1s;
 }
 .keyDeleteCompact
 {
     top: calc(3 * var(--size1u));
     left: calc(2 * var(--size1u));
-    transition: top 1s, left 1s;
 }
 .keyDelete68
 {
     top: calc(1 * var(--size1u));
     left: calc(1 * var(--size1u));
-    transition: top 1s, left 1s;
 }
 .keyDelete75
 {
     top: calc(-1 * var(--size1u));
     left: calc(2 * var(--size1u));
-    transition: top 1s, left 1s;
 }
 
 
@@ -138,8 +134,9 @@
 /* Insert Key - Manual Placement */ 
 .keyInsert
 {
-    top: calc(1 * var(--size1u));
+    top: 0;
     left:0;
+    transition: top 1s, left 1s;
 }
 .keyInsert100
 {

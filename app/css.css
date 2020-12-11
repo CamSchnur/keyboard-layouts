@@ -71,7 +71,6 @@ body {
     grid-template-rows: var(--size1u) var(--navAreaHeightOffset65Layout) auto auto; 
     column-gap: 0px;
     row-gap: 0px;
-    transition: grid-template-columns 1s, grid-template-rows 1s, column-gap 1s, row-gap 1s;
 }
 .keyboard68
 {
@@ -79,7 +78,6 @@ body {
     grid-template-rows: 0px var(--navAreaHeightOffset65Layout) auto auto; 
     column-gap: 0px;
     row-gap: 0px;
-    transition: grid-template-columns 1s, grid-template-rows 1s, column-gap 1s, row-gap 1s;
 }
 .keyboard65
 {
@@ -87,7 +85,6 @@ body {
     grid-template-rows: 0px var(--navAreaHeightOffset65Layout) auto auto; 
     column-gap: 0px;
     row-gap: 0px;
-    transition: grid-template-columns 1s, grid-template-rows 1s, column-gap 1s, row-gap 1s;
 }
 .keyboard60
 {
@@ -103,19 +100,25 @@ body {
     display:none;
     visibility: hidden;
     grid-template-rows: 0px;
-    transition: opacity 0.5s, display 0.5s, visibility 0.5s, grid-template-columns 1s;
+    transition: opacity 0.5s, display 0.5s, visibility 0.5s, grid-template-columns 1s, top 1s, left 1s;
 }
 .visibleElement
 {
     opacity: 1;
     display:initial;
     visibility:initial;
-    transition: opacity 1s ease-in, display 1s ease-in, visibility 1s ease-in, grid-template-columns 1s;
+    transition: opacity 1s ease-in, display 1s ease-in, visibility 1s ease-in, grid-template-columns 1s, top 1s, left 1s;
 }
 
 .infoPanel
 {
     color: lightcyan;
-    font-size: large;
+    font-size: x-large;
+    font-family: 'Open Sans', sans-serif;
+}
+.infoSubPanel
+{
+    color: lightcyan;
+    font-size: medium;
     font-family: 'Open Sans', sans-serif;
 }

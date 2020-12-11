@@ -42,6 +42,9 @@ function removeLayout(layout)
     setVisibleByID('keyInsert', false);
     setVisibleByID('keyEnd', false);
     setVisibleByID('keyHome', false);
+    setVisibleByID('keyPageUp', false);
+    setVisibleByID('keyDown', false);
+    setVisibleByID('keyDelete', false);
     setVisibleByID('keyScrollLock', false);
     removeLayoutById('keyInsert', layout);
     removeLayoutById('keyHome', layout);
@@ -107,6 +110,10 @@ function setUpperNavArea(layout)
 {
     setLayoutById('keyDelete', layout);
     setLayoutById('keyEnd', layout);
+
+    setVisibleByID('keyPageUp', true);
+    setVisibleByID('keyDelete', true);
+    setVisibleByID('keyPageDown', true);
 
     if(layout == '75')
     {

@@ -68,7 +68,7 @@
 {
     grid-template-columns: var(--size225u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) 
                             var(--size1u) var(--size1u) var(--size1u) var(--size1u) var(--size1u) 
-                            var(--size1u) var(--size175u);   
+                            var(--size1u) var(--size275u);   
 }
 .mainBottomRow
 {
