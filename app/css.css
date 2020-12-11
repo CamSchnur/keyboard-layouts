@@ -31,6 +31,8 @@
 --navAreaWidthOffset60Layout:  calc(2 * var(--size1u));
 --navAreaWidthOffset68Layout:  calc((1 * var(--size1u)) - var(--sizeSectionSpace));
 --navAreaHeightOffset65Layout:  calc(3 * var(--size1u));;
+
+--maxKeyboardHeight: calc(6 * var(--size1u) + var(--sizeSectionSpace));
 }
 body {
     background-color: #1e1e1e;

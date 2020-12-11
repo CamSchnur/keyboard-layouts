@@ -4,7 +4,7 @@
     height: 100%;
     display: grid;
     grid-template-columns: 10% 80% 10%;
-    grid-template-rows: 15% 15% 50% 20%;
+    grid-template-rows: 15% 15% var(--maxKeyboardHeight) 20%;
     grid-column-gap: 0px;
     
     align-items: center;
