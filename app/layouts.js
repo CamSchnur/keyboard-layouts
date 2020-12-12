@@ -4,17 +4,21 @@ function addLayout(layout)
 
     $('.keyboard').addClass('keyboard' + layout);
     
-    //deal with the tenkey/numpad
-    if(layout == '100')
+    //deal with the tenkey/numpad, which is only visible in 100% layout
+    var tenKeyVisible = (layout == '100');
+    setVisibleByClass('tenKeyArea', tenKeyVisible);
+    if(tenKeyVisible)
     {
-        //this model has a tenkey
-        setVisibleByClass('tenKeyArea', true);
+        setLayoutByClass('tenKeyArea', '100');
     }
     else
     {
-        //all other models do not
-        setVisibleByClass('tenKeyArea', false);
+        setLayoutByClass('tenKeyArea', 'Compact');
     }
+
+    //deal with the number row, which is visible in all but 40% layouts
+    var numberRowVisible = (layout !== '40')
+    setVisibleByClass('mainNumberRow', numberRowVisible);
 
     //deal with the function row
     setFunctionRow(layout);
@@ -37,6 +41,7 @@ function removeLayout(layout)
     removeLayoutByClass('mainLowerAlphas', layout);
     removeLayoutByClass('functionKeyArea', layout);
     removeLayoutByClass('functionNavArea', layout);
+    removeLayoutByClass('tenKeyArea', layout);
     setVisibleByID('moreInfo' + layout, false);
     setVisibleByID('keyRightWin', false);
     setVisibleByID('keyInsert', false);
@@ -97,6 +102,8 @@ function setNavArea(layout)
             setVisibleByClass('lowerNavArea', true);
             setUpperNavArea('Compact');
             break;
+        case '60':
+        case '40':
         default:
             //these models do not have a nav area:
             setVisibleByClass('upperNavArea', false);
@@ -179,6 +186,10 @@ function setFunctionRow(layout)
             setLayoutByClass('functionNavArea', 'Compact');
             setVisibleByClass('mediaArea', true);
             break;
+        case '68':
+        case '65':
+        case '60':
+        case '40':
         default:
             //these models do not have a function row:
             setLayoutByClass('functionKeyArea', 'Compact');

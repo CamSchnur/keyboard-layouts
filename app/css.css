@@ -30,7 +30,8 @@
 
 --navAreaWidthOffset60Layout:  calc(2 * var(--size1u));
 --navAreaWidthOffset68Layout:  calc((1 * var(--size1u)) - var(--sizeSectionSpace));
---navAreaHeightOffset65Layout:  calc(3 * var(--size1u));;
+--navAreaHeightOffset65Layout:  calc(3 * var(--size1u));
+--navAreaHeightOffset100Layout: calc(3 * var(--size1u) - var(--sizeSectionSpace));
 
 --maxKeyboardHeight: calc(6 * var(--size1u) + var(--sizeSectionSpace));
 }
@@ -56,14 +57,14 @@ body {
 .keyboard100
 {
     grid-template-columns: var(--widthMainArea) var(--widthNavArea) var(--widthTenKeyArea);
-    grid-template-rows: var(--size1u) auto auto auto;
+    grid-template-rows: var(--size1u) var(--navAreaHeightOffset100Layout) auto auto;
     column-gap: var(--sizeSectionSpace);
     row-gap: var(--sizeSectionSpace);
 }
 .keyboardTKL
 {
     grid-template-columns: var(--widthMainArea) var(--widthNavArea) 0px;
-    grid-template-rows:  var(--size1u)  auto auto auto;
+    grid-template-rows:  var(--size1u)  var(--navAreaHeightOffset100Layout) auto auto;
     column-gap: var(--sizeSectionSpace);
     row-gap: var(--sizeSectionSpace);
 }
@@ -91,11 +92,17 @@ body {
 .keyboard60
 {
     grid-template-columns: var(--widthMainArea) 0px 0px;
-    grid-template-rows: 0px auto auto auto; 
+    grid-template-rows: 0px 0px auto auto; 
     column-gap: 0px;
     row-gap: 0px;
 }
-
+.keyboard40
+{
+    grid-template-columns: var(--widthMainArea) 0px 0px;
+    grid-template-rows: 0px 0px auto 0px; 
+    column-gap: 0px;
+    row-gap: 0px;
+}
 .hiddenElement
 {
     opacity: 0;
