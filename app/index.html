@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="sitelayout.css">
         <link rel="stylesheet" href="alphaareas.css">
         <link rel="stylesheet" href="navarea.css">
+        <link rel="stylesheet" href="slider.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
     </head>
@@ -16,7 +17,25 @@
                 Which keyboard layout is right for you?
             </div>
         <div class="siteSlider">
-                <input type="range" min="1" max="6" class="selector" id="rangeSelector"><br/>
+                <datalist id="layoutList">
+                    <option value="layout40">40%</button>
+                    <option value="layout60">60%</button>
+                    <option value="layout65">65%</button>
+                    <option value="layout68">68%</button>
+                    <option value="layout75">75%</button>
+                    <option value="layoutTKL">TKL</button>
+                    <option value="layout100">100%</button>
+                </datalist>
+                <input type="range" min="1" max="7" class="selector" id="rangeSelector" list="layoutList"><br/>
+                <div class="sliderLabels">
+                    <p>40%</p>
+                    <p>60%</p>
+                    <p>65%</p>
+                    <p>68%</p>
+                    <p>75%</p>
+                    <p>TKL</p>
+                    <p>100%</p>
+                </div>
                 <button id="layout40">40%</button>
                 <button id="layout60">60%</button>
                 <button id="layout65">65%</button>

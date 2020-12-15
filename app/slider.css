@@ -1,0 +1,10 @@
+.sliderLabels
+{
+    display:flex;
+    width:100%;
+    background-color:red;
+}
+.selector
+{
+    width:100%;
+}

@@ -1,6 +1,10 @@
 $(document).ready(function() {
     addLayout('100');
     setStyle('dark');
+    $("#rangeSelector").on("input change"), function() 
+    {
+        UpdateLayout();
+    }
     $("#swapLight").click(function() 
     {
         setStyle('light');
@@ -98,4 +102,8 @@ function setStyle(mode)
         $('.keyboard').removeClass('keyboardDark');
         $('.keyboard').addClass('keyboardLight');
     }
+}
+function UpdateLayout()
+{
+    $("#rangeSelector").
 }
