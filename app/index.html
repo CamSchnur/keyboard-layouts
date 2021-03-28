@@ -17,32 +17,17 @@
                 Which keyboard layout is right for you?
             </div>
         <div class="siteSlider">
-                <datalist id="layoutList">
-                    <option value="layout40">40%</button>
-                    <option value="layout60">60%</button>
-                    <option value="layout65">65%</button>
-                    <option value="layout68">68%</button>
-                    <option value="layout75">75%</button>
-                    <option value="layoutTKL">TKL</button>
-                    <option value="layout100">100%</button>
-                </datalist>
-                <input type="range" min="1" max="7" class="selector" id="rangeSelector" list="layoutList"><br/>
+                <input type="range" min="1" max="7" class="selector" id="rangeSelector"><br/>
                 <div class="sliderLabels">
                     <p>40%</p>
-                    <p>60%</p>
-                    <p>65%</p>
-                    <p>68%</p>
-                    <p>75%</p>
-                    <p>TKL</p>
-                    <p>100%</p>
                 </div>
-                <button id="layout40">40%</button>
-                <button id="layout60">60%</button>
-                <button id="layout65">65%</button>
-                <button id="layout68">68%</button>
-                <button id="layout75">75%</button>
-                <button id="layoutTKL">TKL</button>
-                <button id="layout100">100%</button>
+                <button id="layout40" class="sliderButton">40%</button>
+                <button id="layout60" class="sliderButton">60%</button>
+                <button id="layout65" class="sliderButton">65%</button>
+                <button id="layout68" class="sliderButton">68%</button>
+                <button id="layout75" class="sliderButton">75%</button>
+                <button id="layoutTKL" class="sliderButton">TKL</button>
+                <button id="layout100" class="sliderButton">100%</button>
         </div>
         <div class="siteKeyboard">
             <div class="keyboard">
@@ -124,6 +109,14 @@
         <div class="siteConfig">
             <button id="swapLight">Light Style</button>
             <button id="swapDark">Dark Style</button>
+        </div>
+        <div class="siteFooter">
+            <p class="footerText"></p>Supported Browsers: Firefox, Chrome, Edge</p>
+            <p class="footerText"></p>Min. Recommended Screen Size: tbd</p>
+
+            <p class="footerText"></p>Created by <a href="https://twitter.com/camschnur">@CamSchnur</a></p>
+            <p class="footerText"></p>tbd: license info</p>
+
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>

@@ -3,7 +3,7 @@ $(document).ready(function() {
     setStyle('dark');
     $("#rangeSelector").on("input change", function() 
     {
-        UpdateLayout();
+        UpdateLayoutFromSlider();
     });
     $("#swapLight").click(function() 
     {
@@ -13,33 +13,26 @@ $(document).ready(function() {
     {
         setStyle('dark');
     })
-    $("#layout100").click(function() 
-    {        
-        addLayout('100');
+    $("#layout100").click(function() {        
+        UpdateLayoutFromButton('7');
     })
-    $("#layoutTKL").click(function() {
-        
-        addLayout('TKL');
+    $("#layoutTKL").click(function() {   
+        UpdateLayoutFromButton('6');
     })
     $("#layout75").click(function() {
-        
-        addLayout('75');
+        UpdateLayoutFromButton('5');
     })
     $("#layout68").click(function() {
-        
-        addLayout('68');
+        UpdateLayoutFromButton('4');
     })
     $("#layout65").click(function() {
-        
-        addLayout('65');
+        UpdateLayoutFromButton('3');
     })
-    $("#layout60").click(function() {
-        
-        addLayout('60');
+    $("#layout60").click(function() {        
+        UpdateLayoutFromButton('2');
     })
     $("#layout40").click(function() {
-        
-        addLayout('40');
+        UpdateLayoutFromButton('1');
     })
 
 });
@@ -103,10 +96,19 @@ function setStyle(mode)
         $('.keyboard').addClass('keyboardLight');
     }
 }
-function UpdateLayout()
+function UpdateLayoutFromSlider()
 {
     var val = $('#rangeSelector').val();
-    switch(val)
+    SetLayout(val);
+} 
+function UpdateLayoutFromButton(buttonVal)
+{
+    SetLayout(buttonVal);
+    SetSlider(buttonVal);
+}
+function SetLayout(sliderVal)
+{
+    switch(sliderVal)
     {
         case '1':
             addLayout('40');
@@ -130,4 +132,9 @@ function UpdateLayout()
             addLayout('100');
             break;
     }
-} 
+}
+function SetSlider(sliderVal)
+{
+    $('#rangeSelector').val(sliderVal);
+    $('#rangeSelector').slider('refresh');
+}

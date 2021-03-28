@@ -8,3 +8,44 @@
 {
     width:100%;
 }
+
+.selector::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none;
+    background: #1e1e1e;
+    width: 40px;
+    height: 40px;
+    cursor: grab;
+  }
+  
+  .selector::-moz-range-thumb {
+    background: #1e1e1e;
+    width: 40px;
+    height: 40px;
+    cursor: grab; 
+  }
+
+  .sliderButton
+  {
+
+    border-radius: var(--borderRounding);
+    border: solid var(--sizeVisualKeyBorder) lightcyan;
+
+    box-sizing:border-box;
+
+    margin:var(--sizeKeySpace);
+    
+    display: inline-block;
+
+    vertical-align:middle;
+    text-align: center;
+    font-size: 10; 
+    line-height: calc(var(--size1u) - 2 * var(--sizeKeySpace));
+    font-family: 'Open Sans', sans-serif;
+    color: gray;
+    background-color: initial;
+  }
+  .sliderButton:hover
+  {
+      background-color: lightcyan;
+  }
