@@ -105,5 +105,5 @@ function setStyle(mode)
 }
 function UpdateLayout()
 {
-    $("#rangeSelector").
-}
+   // $("#rangeSelector").
+} 
