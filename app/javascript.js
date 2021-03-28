@@ -1,10 +1,10 @@
 $(document).ready(function() {
     addLayout('100');
     setStyle('dark');
-    $("#rangeSelector").on("input change"), function() 
+    $("#rangeSelector").on("input change", function() 
     {
         UpdateLayout();
-    }
+    });
     $("#swapLight").click(function() 
     {
         setStyle('light');
@@ -105,5 +105,29 @@ function setStyle(mode)
 }
 function UpdateLayout()
 {
-   // $("#rangeSelector").
+    var val = $('#rangeSelector').val();
+    switch(val)
+    {
+        case '1':
+            addLayout('40');
+            break;
+        case '2':
+            addLayout('60');
+            break;      
+        case '3':
+            addLayout('65');
+            break; 
+        case '4':
+            addLayout('68');
+            break;    
+        case '5':
+            addLayout('75');
+            break;    
+        case '6':
+            addLayout('TKL');
+            break;         
+        case '7':
+            addLayout('100');
+            break;
+    }
 } 
