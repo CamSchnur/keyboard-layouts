@@ -14,9 +14,11 @@
     </head>
     <body>
         <div class="page">
-            <div class="siteTitle infoPanel">
-                Which keyboard layout is right for you?
+            <div class="siteTitle">
+                <p class="infoPanel">Which keyboard layout is right for you?</p>
+                <p class="infoSubPanelSmaller">Drag the slider to find your ideal layout.</p>
             </div>
+
         <div class="siteSlider">
                 <input type="range" min="1" max="7" class="selector" id="rangeSelector"><br/>
                 <div class="sliderLabels">
@@ -117,13 +119,14 @@
 
         </div>
         <div class="siteConfig">
-            <button id="swapLight">Light Style</button>
-            <button id="swapDark">Dark Style</button>
+            
+            
         </div>
         <div class="siteFooter">
-            <p class="footerText">Code is on my <a class="footerLink" href="https://github.com/CamSchnur/keyboard-layouts/">Github</a> | Follow me on <a class="footerLink" href="https://twitter.com/camschnur">Twitter</a></p>
-            <p class="footerText">I don't get any referral $ for the included product links--they are just keyboards that I like.</p>
-            <p class="footerText">Best viewed in Firefox/Chrome/Edge with a width of at least 1280 pixels</p>
+            <p class="infoSubPanelSmaller">Code is on my <a class="footerLink" href="https://github.com/CamSchnur/keyboard-layouts/">Github</a> | Follow me on <a class="footerLink" href="https://twitter.com/camschnur">Twitter</a></p>
+            <p class="infoSubPanelSmaller">I don't get any referral $ for the included product links--they are just keyboards that I like.</p>
+            <p class="infoSubPanelSmaller">Best viewed in Firefox/Chrome/Edge with a width of at least 1280 pixels</p>
+            <p class="infoSubPanelSmaller">You can also switch the keyboard to <a class="footerLink" href="#" id="swapLight">Light Mode</a> or keep it in <a class="footerLink" href="#" id="swapDark">Dark Mode</a></p>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>

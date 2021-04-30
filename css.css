@@ -131,6 +131,13 @@ body {
     font-size: medium;
     font-family: 'Open Sans', sans-serif;
 }
+.infoSubPanelSmaller
+{
+    text-align:center;
+    color: rgb(148, 163, 163);
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+}
 .footerText
 {
     color: lightcyan;
