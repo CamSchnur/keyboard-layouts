@@ -30,7 +30,7 @@ function addLayout(layout)
     setMainArea(layout);
     
     //show the "more info" box at the bottom
-    setVisibleByID('moreInfo' + layout, true);
+    setVisibleText('#moreInfo' + layout, true);
 }
 
 function removeLayout(layout)
@@ -42,7 +42,7 @@ function removeLayout(layout)
     removeLayoutByClass('functionKeyArea', layout);
     removeLayoutByClass('functionNavArea', layout);
     removeLayoutByClass('tenKeyArea', layout);
-    setVisibleByID('moreInfo' + layout, false);
+    setVisibleText('#moreInfo' + layout, false);
     setVisibleByID('keyRightWin', false);
     setVisibleByID('keyInsert', false);
     setVisibleByID('keyEnd', false);

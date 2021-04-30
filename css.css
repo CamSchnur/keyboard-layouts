@@ -159,3 +159,20 @@ body {
     
     color: lightcyan;
 }
+
+.hiddenText
+{
+    position:absolute;
+    height:0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0s all;
+}
+.visibleText
+{
+    position:initial;
+    height:initial;
+    visibility:initial;
+    opacity: 1;
+    transition: opacity 3s, visibility 3s;
+}

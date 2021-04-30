@@ -66,6 +66,19 @@ function setVisible(elementName, visible)
         $(elementName).addClass('hiddenElement');
     }
 }
+function setVisibleText(elementName, visible)
+{
+    if(visible)
+    {
+        $(elementName).removeClass('hiddenText');
+        $(elementName).addClass('visibleText');
+    }
+    else
+    {
+        $(elementName).removeClass('visibleText');
+        $(elementName).addClass('hiddenText');
+    }
+}
 function setVisibleByID(elementID, visible)
 {
     setVisible('#' + elementID, visible);
