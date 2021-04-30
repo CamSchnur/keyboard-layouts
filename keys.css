@@ -28,9 +28,9 @@
 .keyAlphaAltStyle
 {
     color: darkslategray;
-    background-color: lightyellow;
-    border-left:solid var(--sizeVisualKeyBorderSides) beige;
-    border-right:solid var(--sizeVisualKeyBorderSides) beige;
+    background-color: rgb(252, 252, 238);
+    border-left:solid var(--sizeVisualKeyBorderSides) rgb(238, 238, 210);
+    border-right:solid var(--sizeVisualKeyBorderSides) rgb(238, 238, 210);
     border-top: solid var(--sizeVisualKeyBorderSides) lightgoldenrodyellow;
     border-bottom: solid var(--sizeVisualKeyBorderSides)lightgoldenrodyellow; 
 }
