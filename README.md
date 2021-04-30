@@ -1,11 +1,13 @@
-# kbdLayout
+# keyboard-layouts
 
 A page to help visualize different common layouts for mechanical keyboards
 
-(work in progress)
+Viewable at https://camschnur.github.io/keyboard-layouts/
 
 
 
 Dependencies:
+
 -jquery
+
 -google fonts
