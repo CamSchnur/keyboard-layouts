@@ -7,5 +7,7 @@ A page to help visualize different common layouts for mechanical keyboards
 
 
 Dependencies:
+
 -jquery
+
 -google fonts
