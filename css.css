@@ -137,3 +137,18 @@ body {
     font-size: medium;
     font-family: 'Open Sans', sans-serif;
 }
+.footerLink
+{
+    
+    color: rgb(107, 212, 212);
+}
+.footerLink:visited
+{
+    
+    color: rgb(107, 212, 212);
+}
+.footerLink:hover
+{
+    
+    color: lightcyan;
+}
