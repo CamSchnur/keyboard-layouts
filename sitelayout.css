@@ -4,7 +4,7 @@
     height: 100%;
     display: grid;
     grid-template-columns: 10% 80% 10%;
-    grid-template-rows: 125px 150px var(--maxKeyboardHeight) 200px 200px;
+    grid-template-rows: 100px 200px var(--maxKeyboardHeight) 200px 200px;
     grid-column-gap: 0px;
     
     align-items: center;
@@ -26,8 +26,6 @@
 
     grid-column-start:2;
     grid-column-end:3;
-
-    background-color:aquamarine;
 }
 .siteConfig
 {

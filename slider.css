@@ -2,24 +2,24 @@
 {
     display:flex;
     width:100%;
-    background-color:red;
+    height: 15px;
 }
 .selector
 {
-    width:100%;
+    width:99%;
 }
 
 .selector::-webkit-slider-thumb {
     -webkit-appearance: none; 
     appearance: none;
-    background: #1e1e1e;
+    background: #3a3a3a;
     width: 40px;
     height: 40px;
     cursor: grab;
   }
   
   .selector::-moz-range-thumb {
-    background: #1e1e1e;
+    background: #3a3a3a;
     width: 40px;
     height: 40px;
     cursor: grab; 
@@ -39,8 +39,8 @@
 
     vertical-align:middle;
     text-align: center;
-    font-size: 10; 
-    line-height: calc(var(--size1u) - 2 * var(--sizeKeySpace));
+    font-size: 12; 
+    line-height: 35px;
     font-family: 'Open Sans', sans-serif;
     color: gray;
     background-color: initial;

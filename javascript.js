@@ -1,6 +1,7 @@
 $(document).ready(function() {
     addLayout('100');
     setStyle('dark');
+    $('#rangeSelector').val('7');
     $("#rangeSelector").on("input change", function() 
     {
         UpdateLayoutFromSlider();
